@@ -26,20 +26,6 @@ const certificates: Certificate[] = [
     credentialId: "FEM-789012",
     credentialUrl: "https://example.com",
   },
-  {
-    title: "Full Stack Web Development",
-    issuer: "freeCodeCamp",
-    date: "2023",
-    credentialId: "FCC-345678",
-    credentialUrl: "https://example.com",
-  },
-  {
-    title: "TypeScript Mastery",
-    issuer: "Udemy",
-    date: "2022",
-    credentialId: "UD-901234",
-    credentialUrl: "https://example.com",
-  },
 ];
 
 export default function Certificates() {

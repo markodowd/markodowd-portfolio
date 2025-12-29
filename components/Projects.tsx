@@ -30,22 +30,6 @@ const projects: Project[] = [
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
   },
-  {
-    title: "Weather Dashboard",
-    description:
-      "A beautiful weather dashboard with location-based forecasts and interactive maps.",
-    technologies: ["React", "Chart.js", "OpenWeather API"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-  },
-  {
-    title: "Social Media Analytics",
-    description:
-      "Analytics platform for tracking social media performance with detailed insights and reports.",
-    technologies: ["Next.js", "Python", "Django", "PostgreSQL"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-  },
 ];
 
 export default function Projects() {

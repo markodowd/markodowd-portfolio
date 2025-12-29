@@ -25,21 +25,6 @@ const hobbies: Hobby[] = [
     description: "Fascinated by tech books, science fiction, and personal development.",
     icon: <BookOpen className="h-6 w-6 text-primary" />,
   },
-  {
-    name: "Photography",
-    description: "Capturing moments and landscapes with my camera.",
-    icon: <Camera className="h-6 w-6 text-primary" />,
-  },
-  {
-    name: "Gaming",
-    description: "Enjoying strategy games and indie titles in my downtime.",
-    icon: <Gamepad2 className="h-6 w-6 text-primary" />,
-  },
-  {
-    name: "Fitness",
-    description: "Staying active through gym workouts and outdoor activities.",
-    icon: <Heart className="h-6 w-6 text-primary" />,
-  },
 ];
 
 export default function Hobbies() {

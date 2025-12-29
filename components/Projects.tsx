@@ -1,5 +1,8 @@
+"use client";
+
 import { ExternalLink, Github } from "lucide-react";
 import Link from "next/link";
+import { useMousePosition } from "@/hooks/use-mouse-position";
 
 interface Project {
   title: string;
@@ -46,12 +49,22 @@ const projects: Project[] = [
 ];
 
 export default function Projects() {
+  const { mousePosition, ref } = useMousePosition();
+
   return (
     <section
+      ref={ref}
       id="projects"
-      className="bg-gradient-to-br from-muted/50 via-muted/40 to-primary/10 px-4 py-20 sm:px-6 lg:px-8"
+      className="relative bg-gradient-to-br from-muted/50 via-muted/40 to-primary/10 px-4 py-20 sm:px-6 lg:px-8 overflow-hidden"
     >
-      <div className="mx-auto max-w-6xl">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, oklch(0.5 0.15 265 / 0.2), transparent 40%)`,
+          opacity: mousePosition.x > 0 && mousePosition.y > 0 ? 1 : 0,
+        }}
+      />
+      <div className="relative mx-auto max-w-6xl z-10">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
             Featured Projects

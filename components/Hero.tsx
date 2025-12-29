@@ -1,22 +1,38 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { useMousePosition } from "@/hooks/use-mouse-position";
 
 export default function Hero() {
+  const { mousePosition, ref } = useMousePosition();
+
   return (
     <section
+      ref={ref}
       id="hero"
-      className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-background via-background to-primary/5 px-4 py-20 text-center"
+      className="relative flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-background via-background to-primary/5 px-4 py-20 text-center overflow-hidden"
     >
-      <div className="max-w-4xl space-y-8">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, oklch(0.5 0.15 265 / 0.2), transparent 40%)`,
+          opacity: mousePosition.x > 0 && mousePosition.y > 0 ? 1 : 0,
+        }}
+      />
+      <div className="relative max-w-4xl space-y-8 z-10">
         <div className="space-y-4">
           <h1 className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
             <span className="bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
-              Hi, I&apos;m Mark
+              Mark O'Dowd
             </span>
           </h1>
-          <h2 className="text-2xl font-semibold text-muted-foreground sm:text-3xl md:text-4xl">
-            Full Stack Developer
+          <h2 className="text-4xl font-semibold text-muted-foreground sm:text-3xl md:text-4xl">
+            Software Engineer
           </h2>
+          <h3 className="text-2xl font-semibold text-muted-foreground sm:text-2xl md:text-3xl">
+            Full Stack Web | AWS Certified
+          </h3>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground sm:text-xl">
             I build modern web applications with a focus on user experience,
             performance, and clean code. Passionate about creating digital

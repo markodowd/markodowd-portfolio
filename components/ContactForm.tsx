@@ -6,8 +6,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Mail, Send } from "lucide-react";
+import { useMousePosition } from "@/hooks/use-mouse-position";
 
 export default function ContactForm() {
+  const { mousePosition, ref } = useMousePosition();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -44,10 +46,18 @@ export default function ContactForm() {
 
   return (
     <section
+      ref={ref}
       id="contact"
-      className="bg-gradient-to-b from-background via-muted/20 to-background px-4 py-20 sm:px-6 lg:px-8"
+      className="relative bg-gradient-to-b from-background via-muted/20 to-background px-4 py-20 sm:px-6 lg:px-8 overflow-hidden"
     >
-      <div className="mx-auto max-w-2xl">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, oklch(0.5 0.15 265 / 0.15), transparent 40%)`,
+          opacity: mousePosition.x > 0 && mousePosition.y > 0 ? 1 : 0,
+        }}
+      />
+      <div className="relative mx-auto max-w-2xl z-10">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
             Get In Touch

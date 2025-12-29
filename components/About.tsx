@@ -1,6 +1,10 @@
+"use client";
+
 import { Code, Database, Globe, Smartphone } from "lucide-react";
+import { useMousePosition } from "@/hooks/use-mouse-position";
 
 export default function About() {
+  const { mousePosition, ref } = useMousePosition();
   const skills = [
     {
       icon: Code,
@@ -30,10 +34,18 @@ export default function About() {
 
   return (
     <section
+      ref={ref}
       id="about"
-      className="bg-gradient-to-b from-background via-background to-muted/30 px-4 py-20 sm:px-6 lg:px-8"
+      className="relative bg-gradient-to-b from-background via-background to-muted/30 px-4 py-20 sm:px-6 lg:px-8 overflow-hidden"
     >
-      <div className="mx-auto max-w-6xl">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, oklch(0.5 0.15 265 / 0.15), transparent 40%)`,
+          opacity: mousePosition.x > 0 && mousePosition.y > 0 ? 1 : 0,
+        }}
+      />
+      <div className="relative mx-auto max-w-6xl z-10">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
             About Me

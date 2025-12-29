@@ -9,6 +9,8 @@ export default function Footer() {
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
     { href: "#certificates", label: "Certificates" },
+    { href: "#hobbies", label: "Hobbies" },
+    { href: "#contact", label: "Contact" },
   ];
 
   const socialLinks = [

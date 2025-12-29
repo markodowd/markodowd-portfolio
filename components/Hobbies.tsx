@@ -1,0 +1,83 @@
+import { Heart, Music, BookOpen, Camera, Code2, Gamepad2 } from "lucide-react";
+
+interface Hobby {
+  name: string;
+  description: string;
+  icon: React.ReactNode;
+}
+
+const hobbies: Hobby[] = [
+  {
+    name: "Coding",
+    description: "Exploring new technologies and building side projects in my spare time.",
+    icon: <Code2 className="h-6 w-6 text-primary" />,
+  },
+  {
+    name: "Music",
+    description: "Playing guitar and discovering new artists across various genres.",
+    icon: <Music className="h-6 w-6 text-primary" />,
+  },
+  {
+    name: "Reading",
+    description: "Fascinated by tech books, science fiction, and personal development.",
+    icon: <BookOpen className="h-6 w-6 text-primary" />,
+  },
+  {
+    name: "Photography",
+    description: "Capturing moments and landscapes with my camera.",
+    icon: <Camera className="h-6 w-6 text-primary" />,
+  },
+  {
+    name: "Gaming",
+    description: "Enjoying strategy games and indie titles in my downtime.",
+    icon: <Gamepad2 className="h-6 w-6 text-primary" />,
+  },
+  {
+    name: "Fitness",
+    description: "Staying active through gym workouts and outdoor activities.",
+    icon: <Heart className="h-6 w-6 text-primary" />,
+  },
+];
+
+export default function Hobbies() {
+  return (
+    <section
+      id="hobbies"
+      className="bg-muted/50 px-4 py-20 sm:px-6 lg:px-8"
+    >
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
+            Hobbies & Interests
+          </h2>
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+            Things I enjoy doing outside of work that keep me balanced and
+            inspired.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {hobbies.map((hobby, index) => (
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg"
+            >
+              <div className="mb-4 flex items-start gap-4">
+                <div className="rounded-lg bg-primary/10 p-3">
+                  {hobby.icon}
+                </div>
+                <div className="flex-1">
+                  <h3 className="mb-2 text-xl font-semibold">{hobby.name}</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {hobby.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+

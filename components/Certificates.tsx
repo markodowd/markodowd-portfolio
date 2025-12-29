@@ -43,7 +43,7 @@ export default function Certificates() {
   return (
     <section
       id="certificates"
-      className="px-4 py-20 sm:px-6 lg:px-8"
+      className="bg-gradient-to-b from-background via-background to-muted/20 px-4 py-20 sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">

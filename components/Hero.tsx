@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="flex min-h-screen flex-col items-center justify-center px-4 py-20 text-center"
+      className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-background via-background to-primary/5 px-4 py-20 text-center"
     >
       <div className="max-w-4xl space-y-8">
         <div className="space-y-4">

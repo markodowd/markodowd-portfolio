@@ -45,7 +45,7 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="px-4 py-20 sm:px-6 lg:px-8"
+      className="bg-gradient-to-b from-background via-muted/20 to-background px-4 py-20 sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-2xl">
         <div className="mb-16 text-center">

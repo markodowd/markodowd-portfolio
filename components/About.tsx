@@ -31,7 +31,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="px-4 py-20 sm:px-6 lg:px-8"
+      className="bg-gradient-to-b from-background via-background to-muted/30 px-4 py-20 sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">

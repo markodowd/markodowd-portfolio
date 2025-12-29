@@ -43,7 +43,7 @@ export default function Hobbies() {
   return (
     <section
       id="hobbies"
-      className="bg-muted/50 px-4 py-20 sm:px-6 lg:px-8"
+      className="bg-gradient-to-br from-primary/10 via-muted/50 to-muted/40 px-4 py-20 sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">

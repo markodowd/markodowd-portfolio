@@ -49,7 +49,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="bg-muted/50 px-4 py-20 sm:px-6 lg:px-8"
+      className="bg-gradient-to-br from-muted/50 via-muted/40 to-primary/10 px-4 py-20 sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">

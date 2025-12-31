@@ -16,7 +16,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "E-Commerce Platform",
+    title: "Fight or Flight Studio",
     description:
       "A full-stack e-commerce solution with payment integration, user authentication, and admin dashboard.",
     technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
@@ -25,7 +25,7 @@ const projects: Project[] = [
     image: "/images/projects/forf.webp",
   },
   {
-    title: "Task Management App",
+    title: "Irish Trad",
     description:
       "A collaborative task management application with real-time updates and team collaboration features.",
     technologies: ["React", "Node.js", "Socket.io", "MongoDB"],

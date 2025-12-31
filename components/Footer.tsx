@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 export default function Footer() {
@@ -27,7 +26,7 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 text-lg font-semibold">Mark Portfolio</h3>
             <p className="text-sm text-muted-foreground">
-              Full Stack Developer passionate about creating amazing web
+              Fullstack Developer passionate about creating amazing web
               experiences.
             </p>
           </div>
@@ -36,13 +35,13 @@ export default function Footer() {
             <h3 className="mb-4 text-lg font-semibold">Navigation</h3>
             <nav className="flex flex-col gap-2">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
                   href={link.href}
                   className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
             </nav>
           </div>

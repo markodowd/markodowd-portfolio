@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { useMousePosition } from "@/hooks/use-mouse-position";
 
@@ -72,19 +71,19 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
-          <Link
+          <a
             href="#projects"
             className="group flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:scale-105 hover:shadow-lg"
           >
             View My Work
             <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-1" />
-          </Link>
-          <Link
+          </a>
+          <a
             href="#about"
             className="rounded-full border border-border bg-card px-6 py-3 text-sm font-medium transition-all hover:scale-105 hover:bg-accent"
           >
             Learn More
-          </Link>
+          </a>
         </div>
 
         <div className="flex items-center justify-center gap-6 pt-8">

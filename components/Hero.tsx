@@ -10,7 +10,7 @@ export default function Hero() {
     <section
       ref={ref}
       id="hero"
-      className="relative flex min-h-screen flex-col items-center justify-center px-4 py-20 text-center overflow-hidden"
+      className="relative flex min-h-screen flex-col items-center justify-center px-4 pt-24 pb-20 text-center overflow-hidden"
     >
       {/* Animated gradient background - base layer */}
       <div

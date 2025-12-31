@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Award, Calendar } from "lucide-react";
 import { useMousePosition } from "@/hooks/use-mouse-position";
 
@@ -7,6 +8,7 @@ interface Certificate {
   title: string;
   issuer: string;
   date: string;
+  image?: string;
   credentialId?: string;
   credentialUrl?: string;
 }
@@ -16,14 +18,16 @@ const certificates: Certificate[] = [
     title: "AWS Certified Solutions Architect",
     issuer: "Amazon Web Services",
     date: "2024",
+    image: "/images/certifications/solutions.webp",
     credentialId: "AWS-123456",
     credentialUrl: "https://example.com",
   },
   {
-    title: "React Advanced Patterns",
-    issuer: "Frontend Masters",
+    title: "AWS Certified Cloud Practitioner",
+    issuer: "Amazon Web Services",
     date: "2023",
-    credentialId: "FEM-789012",
+    image: "/images/certifications/ccp.webp",
+    credentialId: "AWS-789012",
     credentialUrl: "https://example.com",
   },
 ];
@@ -72,6 +76,17 @@ export default function Certificates() {
                   <p className="mb-3 text-sm font-medium text-muted-foreground">
                     {certificate.issuer}
                   </p>
+                  {certificate.image && (
+                    <div className="mb-3 w-full">
+                      <Image
+                        src={certificate.image}
+                        alt={certificate.title}
+                        width={600}
+                        height={400}
+                        className="w-full h-auto rounded-lg object-cover"
+                      />
+                    </div>
+                  )}
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Calendar className="h-4 w-4" />
                     <span>{certificate.date}</span>

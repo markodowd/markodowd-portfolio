@@ -1,27 +1,29 @@
 "use client";
 
+import Image from "next/image";
 import { Heart, Music, BookOpen, Camera, Code2, Gamepad2 } from "lucide-react";
 import { useMousePosition } from "@/hooks/use-mouse-position";
 
 interface Hobby {
   name: string;
   description: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
+  image?: string;
 }
 
 const hobbies: Hobby[] = [
   {
-    name: "Coding",
-    description: "Exploring new technologies and building side projects in my spare time.",
-    icon: <Code2 className="h-6 w-6 text-primary" />,
+    name: "Jujitsu",
+    description: "Training in Japanese Jiu-Jitsu with the World Jiu-Jitsu Federation Ireland (WJJF) to stay active and disciplined.",
+    image: "/images/hobbies/jujitsu.webp",
   },
   {
-    name: "Music",
+    name: "Music & Instruments",
     description: "Playing guitar and discovering new artists across various genres.",
-    icon: <Music className="h-6 w-6 text-primary" />,
+    image: "/images/hobbies/banjo.webp",
   },
   {
-    name: "Reading",
+    name: "Chess",
     description: "Fascinated by tech books, science fiction, and personal development.",
     icon: <BookOpen className="h-6 w-6 text-primary" />,
   },
@@ -61,9 +63,11 @@ export default function Hobbies() {
               className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg"
             >
               <div className="mb-4 flex items-start gap-4">
-                <div className="rounded-lg bg-primary/10 p-3">
-                  {hobby.icon}
-                </div>
+                {hobby.icon && (
+                  <div className="rounded-lg bg-primary/10 p-3">
+                    {hobby.icon}
+                  </div>
+                )}
                 <div className="flex-1">
                   <h3 className="mb-2 text-xl font-semibold">{hobby.name}</h3>
                   <p className="text-sm text-muted-foreground">
@@ -71,6 +75,16 @@ export default function Hobbies() {
                   </p>
                 </div>
               </div>
+              {hobby.image && (
+                <div className="relative w-full aspect-video rounded-lg overflow-hidden mt-4">
+                  <Image
+                    src={hobby.image}
+                    alt={hobby.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
             </div>
           ))}
         </div>

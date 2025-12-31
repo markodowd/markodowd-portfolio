@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mark O'Dowd",
-  description: "Full Stack Web | AWS Certified",
+  title: "Mark O'Dowd | Fullstack Developer | AWS Certified",
+  description: "Fullstack Developer | AWS Certified",
 };
 
 export default function RootLayout({

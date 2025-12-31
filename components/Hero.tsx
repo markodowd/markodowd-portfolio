@@ -62,7 +62,7 @@ export default function Hero() {
             Software Engineer
           </h2>
           <h3 className="text-2xl font-semibold text-muted-foreground sm:text-2xl md:text-3xl">
-            Full Stack Web | AWS Certified
+            Fullstack Developer | AWS Certified
           </h3>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground sm:text-xl">
             I build modern web applications with a focus on user experience,

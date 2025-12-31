@@ -60,9 +60,9 @@ export default function Hobbies() {
           {hobbies.map((hobby, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg"
+              className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg flex flex-col"
             >
-              <div className="mb-4 flex items-start gap-4">
+              <div className="mb-4 flex items-start gap-4 flex-grow">
                 {hobby.icon && (
                   <div className="rounded-lg bg-primary/10 p-3">
                     {hobby.icon}
@@ -76,7 +76,7 @@ export default function Hobbies() {
                 </div>
               </div>
               {hobby.image && (
-                <div className="relative w-full aspect-video rounded-lg overflow-hidden mt-4">
+                <div className="relative w-full h-64 rounded-lg overflow-hidden bg-muted/50">
                   <Image
                     src={hobby.image}
                     alt={hobby.name}

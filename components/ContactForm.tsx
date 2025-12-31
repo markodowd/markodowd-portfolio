@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -10,13 +11,13 @@ import { useMousePosition } from "@/hooks/use-mouse-position";
 
 export default function ContactForm() {
   const { mousePosition, ref } = useMousePosition();
+  const [state, handleSubmit] = useForm("xojvazad");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -27,21 +28,17 @@ export default function ContactForm() {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      alert("Thank you for your message! I'll get back to you soon.");
+    await handleSubmit(e);
+    if (state.succeeded) {
       setFormData({
         name: "",
         email: "",
         subject: "",
         message: "",
       });
-    }, 1000);
+    }
   };
 
   return (
@@ -68,7 +65,7 @@ export default function ContactForm() {
         </div>
 
         <div className="rounded-lg border border-border bg-card p-8 shadow-lg">
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={onSubmit} className="space-y-6">
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>
@@ -93,6 +90,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                 />
+                <ValidationError prefix="Email" field="email" errors={state.errors} />
               </div>
             </div>
 
@@ -120,15 +118,24 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
               />
+              <ValidationError prefix="Message" field="message" errors={state.errors} />
             </div>
+
+            {state.succeeded && (
+              <div className="rounded-lg bg-green-500/10 border border-green-500/20 p-4 text-center text-green-600 dark:text-green-400">
+                Thank you for your message! I'll get back to you soon.
+              </div>
+            )}
+
+            <ValidationError errors={state.errors} />
 
             <Button
               type="submit"
-              disabled={isSubmitting}
+              disabled={state.submitting}
               className="w-full"
               size="lg"
             >
-              {isSubmitting ? (
+              {state.submitting ? (
                 <>
                   <Mail className="h-4 w-4" />
                   Sending...

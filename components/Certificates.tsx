@@ -63,50 +63,52 @@ export default function Certificates() {
           {certificates.map((certificate, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg"
+              className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg flex flex-col"
             >
-              <div className="mb-4 flex items-start gap-4">
-                <div className="rounded-lg bg-primary/10 p-3">
-                  <Award className="h-6 w-6 text-primary" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="mb-1 text-xl font-semibold">
+              <div className="mb-4 flex items-start justify-between gap-4">
+                <div className="flex flex-col flex-1">
+                  <h3 className="text-xl font-semibold">
                     {certificate.title}
                   </h3>
-                  <p className="mb-3 text-sm font-medium text-muted-foreground">
+                  <p className="text-sm font-medium text-muted-foreground">
                     {certificate.issuer}
                   </p>
-                  {certificate.image && (
-                    <div className="mb-3 w-full">
-                      <Image
-                        src={certificate.image}
-                        alt={certificate.title}
-                        width={600}
-                        height={400}
-                        className="w-full h-auto rounded-lg object-cover"
-                      />
-                    </div>
-                  )}
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Calendar className="h-4 w-4" />
-                    <span>{certificate.date}</span>
-                  </div>
-                  {certificate.credentialId && (
-                    <p className="mt-2 text-xs text-muted-foreground">
-                      Credential ID: {certificate.credentialId}
-                    </p>
-                  )}
-                  {certificate.credentialUrl && (
-                    <a
-                      href={certificate.credentialUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-3 inline-block text-sm font-medium text-primary hover:underline"
-                    >
-                      View Credential →
-                    </a>
-                  )}
                 </div>
+                <div className="rounded-lg bg-primary/10 p-3 flex-shrink-0">
+                  <Award className="h-6 w-6 text-primary" />
+                </div>
+              </div>
+              <div className="flex-1">
+                {certificate.image && (
+                  <div className="mb-3 w-full">
+                    <Image
+                      src={certificate.image}
+                      alt={certificate.title}
+                      width={600}
+                      height={400}
+                      className="w-full h-auto rounded-lg object-cover"
+                    />
+                  </div>
+                )}
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Calendar className="h-4 w-4" />
+                  <span>{certificate.date}</span>
+                </div>
+                {certificate.credentialId && (
+                  <p className="mt-2 text-xs text-muted-foreground">
+                    Credential ID: {certificate.credentialId}
+                  </p>
+                )}
+                {certificate.credentialUrl && (
+                  <a
+                    href={certificate.credentialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-block text-sm font-medium text-primary hover:underline"
+                  >
+                    View Credential →
+                  </a>
+                )}
               </div>
             </div>
           ))}

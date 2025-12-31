@@ -25,7 +25,7 @@ const hobbies: Hobby[] = [
   {
     name: "Chess",
     description: "Fascinated by tech books, science fiction, and personal development.",
-    icon: <BookOpen className="h-6 w-6 text-primary" />,
+    image: "/images/hobbies/chess.webp",
   },
 ];
 

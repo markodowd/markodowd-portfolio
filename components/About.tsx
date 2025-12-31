@@ -32,7 +32,7 @@ export default function About() {
         <div className="grid gap-8 md:grid-cols-2 items-center">
           <ScrollAnimation direction="right" delay={0.1}>
             <div className="space-y-4">
-              <p className="text-lg text-muted-foreground">
+              <p className="text-muted-foreground">
                 I&apos;m a passionate developer with a love for creating elegant
                 solutions to complex problems. With experience in both frontend and
                 backend technologies, I bring a holistic approach to web development.

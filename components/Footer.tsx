@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, MessageSquare } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,9 +14,10 @@ export default function Footer() {
 
   const socialLinks = [
     { href: "https://github.com", icon: Github, label: "GitHub" },
-    { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
-    { href: "https://twitter.com", icon: Twitter, label: "Twitter" },
-    { href: "mailto:your.email@example.com", icon: Mail, label: "Email" },
+    { href: "https://www.linkedin.com/in/markodowd2/", icon: Linkedin, label: "LinkedIn" },
+    { href: "https://x.com/markodowd_dev", icon: Twitter, label: "X" },
+    { href: "https://bsky.app/profile/markodowd.dev", icon: MessageSquare, label: "Bluesky" },
+    { href: "mailto:contact@markodowd.dev", icon: Mail, label: "Email" },
   ];
 
   return (
@@ -24,7 +25,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Mark Portfolio</h3>
+            <h3 className="mb-4 text-lg font-semibold">Mark O'Dowd Portfolio</h3>
             <p className="text-sm text-muted-foreground">
               Fullstack developer passionate about creating amazing web
               experiences.
@@ -70,8 +71,7 @@ export default function Footer() {
 
         <div className="mt-8 border-t border-border pt-8 text-center text-sm text-muted-foreground">
           <p>
-            © {currentYear} Mark. All rights reserved. Built with Next.js and
-            Tailwind CSS.
+            © {currentYear} Mark O'Dowd. All rights reserved.
           </p>
         </div>
       </div>

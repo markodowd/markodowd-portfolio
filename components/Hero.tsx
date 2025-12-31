@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Twitter, MessageSquare } from "lucide-react";
 import { useMousePosition } from "@/hooks/use-mouse-position";
 
 export default function Hero() {
@@ -97,7 +97,7 @@ export default function Hero() {
             <Github className="h-6 w-6" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/markodowd2/"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full p-3 transition-all hover:scale-110 hover:bg-accent"
@@ -106,7 +106,25 @@ export default function Hero() {
             <Linkedin className="h-6 w-6" />
           </a>
           <a
-            href="mailto:your.email@example.com"
+            href="https://x.com/markodowd_dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full p-3 transition-all hover:scale-110 hover:bg-accent"
+            aria-label="X"
+          >
+            <Twitter className="h-6 w-6" />
+          </a>
+          <a
+            href="https://bsky.app/profile/markodowd.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full p-3 transition-all hover:scale-110 hover:bg-accent"
+            aria-label="Bluesky"
+          >
+            <MessageSquare className="h-6 w-6" />
+          </a>
+          <a
+            href="mailto:contact@markodowd.dev"
             className="rounded-full p-3 transition-all hover:scale-110 hover:bg-accent"
             aria-label="Email"
           >

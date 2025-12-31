@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useMousePosition } from "@/hooks/use-mouse-position";
@@ -9,7 +9,6 @@ interface Project {
   title: string;
   description: string;
   technologies: string[];
-  githubUrl?: string;
   liveUrl?: string;
   image?: string;
 }
@@ -18,19 +17,17 @@ const projects: Project[] = [
   {
     title: "Fight or Flight Studio",
     description:
-      "A full-stack e-commerce solution with payment integration, user authentication, and admin dashboard.",
-    technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+      "A custom portfolio website built for a Manchester-based creative studio. Developed using a modern tech stack and deployed to AWS with staging and production environments. Integrated Contentful CMS for content management and configured Cloudflare DNS for enhanced performance and security.",
+    technologies: ["Next", "React", "TypeScript", "Contentful CMS", "AWS"],
+    liveUrl: "https://www.fightorflight.studio",
     image: "/images/projects/forf.webp",
   },
   {
     title: "Irish Trad",
     description:
-      "A collaborative task management application with real-time updates and team collaboration features.",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+      "A fullstack web application designed for musicians learning traditional Irish instruments. Features include interactive sheet music, ear and sight training modules, along with practice tools such as a chromatic tuner and metronome. A passion project that demonstrates my dedication to creating meaningful, community-focused applications.",
+    technologies: ["Next", "React", "TypeScript", "Django", "AWS"],
+    liveUrl: "https://www.irishtrad.ie",
     image: "/images/projects/irishtrad.webp",
   },
 ];
@@ -72,17 +69,6 @@ export default function Projects() {
                 <div className="mb-4 flex items-start justify-between">
                   <h3 className="text-2xl font-semibold">{project.title}</h3>
                   <div className="flex gap-2">
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="rounded-lg p-2 transition-colors hover:bg-accent"
-                        aria-label="GitHub"
-                      >
-                        <Github className="h-5 w-5" />
-                      </a>
-                    )}
                     {project.liveUrl && (
                       <a
                         href={project.liveUrl}

@@ -8,6 +8,7 @@ interface Certificate {
   title: string;
   issuer: string;
   date: string;
+  description?: string;
   image?: string;
   credentialId?: string;
   credentialUrl?: string;
@@ -17,18 +18,20 @@ const certificates: Certificate[] = [
   {
     title: "AWS Certified Solutions Architect",
     issuer: "Amazon Web Services",
-    date: "2024",
+    date: "2025",
+    description: "This certification validates expertise in designing distributed systems on AWS, including compute, storage, networking, and security services. It covers architectural best practices, cost optimization, and scalability patterns for cloud-based applications.",
     image: "/images/certifications/solutions.webp",
-    credentialId: "AWS-123456",
-    credentialUrl: "https://example.com",
+    credentialId: "99597869b2b646e0817788459a545da4",
+    credentialUrl: "https://cp.certmetrics.com/amazon/en/public/verify/credential/99597869b2b646e0817788459a545da4"
   },
   {
     title: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services",
-    date: "2023",
+    date: "2024",
+    description: "This foundational certification demonstrates understanding of AWS Cloud concepts, services, security, architecture, pricing, and support. It covers core AWS services, use cases, deployment models, and basic architectural principles of the AWS Cloud platform.",
     image: "/images/certifications/ccp.webp",
-    credentialId: "AWS-789012",
-    credentialUrl: "https://example.com",
+    credentialId: "5e89a2261c694a02a802e05d8331d7d9",
+    credentialUrl: "https://cp.certmetrics.com/amazon/en/public/verify/credential/5e89a2261c694a02a802e05d8331d7d9",
   },
 ];
 
@@ -79,6 +82,11 @@ export default function Certificates() {
                 </div>
               </div>
               <div className="flex-1">
+                {certificate.description && (
+                  <p className="mb-4 text-sm text-muted-foreground">
+                    {certificate.description}
+                  </p>
+                )}
                 {certificate.image && (
                   <div className="mb-3 w-full">
                     <Image

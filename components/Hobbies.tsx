@@ -15,13 +15,14 @@ interface Hobby {
 const hobbies: Hobby[] = [
   {
     name: "Jujitsu",
-    description: "Training in Japanese Jiu-Jitsu with the World Jiu-Jitsu Federation Ireland (WJJF) to stay active and disciplined.",
+    description: "I've been practicing Japanese Jiu-Jitsu with the World Jiu-Jitsu Federation Ireland (WJJF) for about 8 years. I should be achieving my black belt soon, which represents years of dedication and discipline.",
     image: "/images/hobbies/jujitsu.webp",
   },
   {
     name: "Music & Instruments",
-    description: "Playing guitar and discovering new artists across various genres.",
+    description: "I've been playing guitar for more than 25 years and banjo for 4 years. I play in traditional Irish sessions, which I enjoy for both the performance aspect and the social nature of the gatherings.",
     image: "/images/hobbies/banjo.webp",
+    link: "https://www.youtube.com/@MarkODowd-IrishTenorBanjo",
   },
   {
     name: "Chess",
@@ -82,7 +83,7 @@ export default function Hobbies() {
                       rel="noopener noreferrer"
                       className="mt-2 inline-block text-sm text-primary hover:underline"
                     >
-                      Lichess Profile
+                      {hobby.name === "Chess" ? "Lichess Profile" : "YouTube Channel"}
                     </a>
                   )}
                 </div>

@@ -28,7 +28,7 @@ export default function ContactForm() {
     });
   };
 
-  const onSubmit = async (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     await handleSubmit(e);
     if (state.succeeded) {
@@ -148,6 +148,17 @@ export default function ContactForm() {
               )}
             </Button>
           </form>
+          <div className="mt-6 text-center text-sm text-muted-foreground">
+            <p>
+              Prefer direct contact?{" "}
+              <a
+                href="mailto:contact@markodowd.dev"
+                className="text-primary hover:underline font-medium"
+              >
+                contact@markodowd.dev
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -26,7 +26,7 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 text-lg font-semibold">Mark Portfolio</h3>
             <p className="text-sm text-muted-foreground">
-              Fullstack Developer passionate about creating amazing web
+              Fullstack developer passionate about creating amazing web
               experiences.
             </p>
           </div>

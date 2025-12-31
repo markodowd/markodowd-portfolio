@@ -1,11 +1,32 @@
 "use client";
 
-import { ArrowDown, Github, Linkedin, Mail, Twitter, MessageSquare } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Twitter, MessageSquare, Sparkles } from "lucide-react";
 import { useMousePosition } from "@/hooks/use-mouse-position";
 import { motion } from "framer-motion";
 
 export default function Hero() {
   const { mousePosition, ref } = useMousePosition();
+
+  // Typing animation variants for subtitle
+  const subtitleVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05,
+        delayChildren: 0.5,
+      },
+    },
+  };
+
+  const letterVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.3 }
+    },
+  };
 
   return (
     <section
@@ -52,126 +73,187 @@ export default function Hero() {
         }}
       />
       
-      {/* Subtle glow effect behind content */}
+      {/* Enhanced glow effect behind content */}
       <div className="relative max-w-4xl space-y-8 z-10 before:absolute before:inset-0 before:rounded-3xl before:bg-primary/5 before:blur-3xl before:-z-10">
         <motion.div 
-          className="space-y-4"
+          className="space-y-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.21, 1.11, 0.81, 0.99] }}
         >
+          {/* Enhanced name with better typography */}
           <motion.h1 
-            className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl"
+            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ 
+              duration: 0.8, 
+              delay: 0.2,
+              type: "spring",
+              stiffness: 100
+            }}
           >
-            <span className="bg-gradient-to-r from-foreground via-primary to-foreground/70 bg-clip-text text-transparent">
-              Mark O'Dowd
+            <span className="relative inline-block">
+              <span className="bg-gradient-to-r from-foreground via-primary via-50% to-foreground/70 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift-text">
+                Mark O'Dowd
+              </span>
+              {/* Animated underline */}
+              <motion.span
+                className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
+              />
             </span>
           </motion.h1>
+
+          {/* Enhanced subtitle with typing effect */}
           <motion.h2 
-            className="text-4xl font-semibold text-muted-foreground sm:text-3xl md:text-4xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            Software Engineer
-          </motion.h2>
-          <motion.h3 
-            className="text-2xl font-semibold text-muted-foreground sm:text-2xl md:text-3xl"
+            className="text-3xl font-semibold text-muted-foreground sm:text-4xl md:text-5xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Fullstack Developer | AWS Certified
-          </motion.h3>
-          <motion.p 
-            className="mx-auto max-w-2xl text-lg text-muted-foreground sm:text-xl"
+            <motion.span
+              variants={subtitleVariants}
+              initial="hidden"
+              animate="visible"
+              className="inline-block"
+            >
+              {"Software Engineer".split("").map((char, i) => (
+                <motion.span
+                  key={i}
+                  variants={letterVariants}
+                  className="inline-block"
+                >
+                  {char === " " ? "\u00A0" : char}
+                </motion.span>
+              ))}
+            </motion.span>
+          </motion.h2>
+
+          {/* Badge/tag for credentials */}
+          <motion.div
+            className="flex items-center justify-center gap-3 flex-wrap"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
           >
-            I build modern web applications with a focus on user experience,
+            <motion.span
+              className="px-4 py-1.5 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 backdrop-blur-sm"
+              whileHover={{ scale: 1.05, backgroundColor: "oklch(var(--primary) / 0.2)" }}
+              transition={{ type: "spring", stiffness: 400 }}
+            >
+              Fullstack Developer
+            </motion.span>
+            <motion.span
+              className="px-4 py-1.5 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 backdrop-blur-sm"
+              whileHover={{ scale: 1.05, backgroundColor: "oklch(var(--primary) / 0.2)" }}
+              transition={{ type: "spring", stiffness: 400 }}
+            >
+              AWS Certified
+            </motion.span>
+          </motion.div>
+
+          {/* Enhanced description with better animation */}
+          <motion.p 
+            className="mx-auto max-w-2xl text-lg text-muted-foreground/90 sm:text-xl leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+          >
+            I build{" "}
+            <span className="relative inline-block font-semibold text-foreground">
+              modern web applications
+              <motion.span
+                className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary/30"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ delay: 1.2, duration: 0.6 }}
+              />
+            </span>
+            {" "}with a focus on user experience,
             performance, and clean code. Passionate about creating digital
             solutions that make a difference.
           </motion.p>
         </motion.div>
 
+        {/* Enhanced buttons with glassmorphism */}
         <motion.div 
           className="flex flex-wrap items-center justify-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <a
+          <motion.a
             href="#projects"
-            className="group flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:scale-105 hover:shadow-lg"
+            className="group relative flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground transition-all overflow-hidden"
+            whileHover={{ scale: 1.05, boxShadow: "0 10px 30px -10px oklch(var(--primary) / 0.5)" }}
+            whileTap={{ scale: 0.98 }}
           >
-            View My Work
-            <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-1" />
-          </a>
-          <a
+            <span className="relative z-10 flex items-center gap-2">
+              View My Work
+              <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-1" />
+            </span>
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80"
+              initial={{ x: "-100%" }}
+              whileHover={{ x: "0%" }}
+              transition={{ duration: 0.3 }}
+            />
+          </motion.a>
+          
+          <motion.a
             href="#about"
-            className="rounded-full border border-border bg-card px-6 py-3 text-sm font-medium transition-all hover:scale-105 hover:bg-accent"
+            className="relative rounded-full border border-border bg-card/50 backdrop-blur-sm px-8 py-4 text-sm font-medium transition-all overflow-hidden group"
+            whileHover={{ scale: 1.05, borderColor: "oklch(var(--primary) / 0.5)" }}
+            whileTap={{ scale: 0.98 }}
           >
-            Learn More
-          </a>
+            <span className="relative z-10">Learn More</span>
+            <motion.div
+              className="absolute inset-0 bg-accent/50"
+              initial={{ x: "-100%" }}
+              whileHover={{ x: "0%" }}
+              transition={{ duration: 0.3 }}
+            />
+          </motion.a>
         </motion.div>
 
+        {/* Enhanced social icons with better hover effects */}
         <motion.div 
           className="flex items-center justify-center gap-6 pt-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
         >
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full p-3 transition-all hover:scale-110 hover:bg-accent group"
-            aria-label="GitHub"
-          >
-            <Github className="h-6 w-6 transition-colors group-hover:text-primary" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/markodowd2/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full p-3 transition-all hover:scale-110 hover:bg-accent group"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="h-6 w-6 transition-colors group-hover:text-primary" />
-          </a>
-          <a
-            href="https://x.com/markodowd_dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full p-3 transition-all hover:scale-110 hover:bg-accent group"
-            aria-label="X"
-          >
-            <Twitter className="h-6 w-6 transition-colors group-hover:text-primary" />
-          </a>
-          <a
-            href="https://bsky.app/profile/markodowd.dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full p-3 transition-all hover:scale-110 hover:bg-accent group"
-            aria-label="Bluesky"
-          >
-            <MessageSquare className="h-6 w-6 transition-colors group-hover:text-primary" />
-          </a>
-          <a
-            href="mailto:contact@markodowd.dev"
-            className="rounded-full p-3 transition-all hover:scale-110 hover:bg-accent group"
-            aria-label="Email"
-          >
-            <Mail className="h-6 w-6 transition-colors group-hover:text-primary" />
-          </a>
+          {[
+            { icon: Github, href: "https://github.com", label: "GitHub" },
+            { icon: Linkedin, href: "https://www.linkedin.com/in/markodowd2/", label: "LinkedIn" },
+            { icon: Twitter, href: "https://x.com/markodowd_dev", label: "X" },
+            { icon: MessageSquare, href: "https://bsky.app/profile/markodowd.dev", label: "Bluesky" },
+            { icon: Mail, href: "mailto:contact@markodowd.dev", label: "Email" },
+          ].map(({ icon: Icon, href, label }, index) => (
+            <motion.a
+              key={label}
+              href={href}
+              target={href.startsWith("mailto:") ? undefined : "_blank"}
+              rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+              className="relative rounded-full p-3 transition-all group"
+              aria-label={label}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1 + index * 0.1 }}
+              whileHover={{ scale: 1.15, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="absolute inset-0 rounded-full bg-primary/10 scale-0 group-hover:scale-100 transition-transform duration-300" />
+              <Icon className="relative h-6 w-6 transition-colors group-hover:text-primary z-10" />
+            </motion.a>
+          ))}
         </motion.div>
       </div>
 
-      {/* Animated scroll indicator */}
+      {/* Enhanced scroll indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
         initial={{ opacity: 0 }}
@@ -181,10 +263,11 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center gap-2 text-muted-foreground"
+          className="flex flex-col items-center gap-2 text-muted-foreground cursor-pointer group"
+          onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}
         >
-          <span className="text-sm">Scroll</span>
-          <ArrowDown className="h-5 w-5" />
+          <span className="text-sm group-hover:text-primary transition-colors">Scroll</span>
+          <ArrowDown className="h-5 w-5 group-hover:text-primary transition-colors" />
         </motion.div>
       </motion.div>
     </section>

@@ -8,6 +8,7 @@ import {
   SheetContent,
   SheetTrigger,
   SheetClose,
+  SheetTitle,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
@@ -125,7 +126,7 @@ export default function Navbar() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col gap-4 mt-8">
                 <div className="mb-4">
-                  <h2 className="text-lg font-semibold">Navigation</h2>
+                  <SheetTitle className="text-lg font-semibold">Navigation</SheetTitle>
                 </div>
                 {navLinks.map((link) => {
                   const sectionId = link.href.substring(1);

@@ -2,6 +2,7 @@
 
 import { ExternalLink, Github } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useMousePosition } from "@/hooks/use-mouse-position";
 
 interface Project {
@@ -21,6 +22,7 @@ const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
+    image: "/images/projects/forf.webp",
   },
   {
     title: "Task Management App",
@@ -29,6 +31,7 @@ const projects: Project[] = [
     technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
+    image: "/images/projects/irishtrad.webp",
   },
 ];
 
@@ -96,6 +99,16 @@ export default function Projects() {
                 <p className="mb-4 text-muted-foreground">
                   {project.description}
                 </p>
+                {project.image && (
+                  <div className="mb-4 relative w-full aspect-video rounded-lg overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, techIndex) => (
                     <span

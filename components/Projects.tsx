@@ -26,7 +26,7 @@ const projects: Project[] = [
   {
     title: "Irish Trad",
     description:
-      "A fullstack web application designed for musicians learning traditional Irish instruments. Features include interactive sheet music, ear and sight training modules, along with practice tools such as a chromatic tuner and metronome. A passion project that demonstrates my dedication to creating meaningful, community-focused applications.",
+      "A full-stack web application designed for musicians learning traditional Irish instruments. Features include interactive sheet music, ear and sight training modules, along with practice tools such as a chromatic tuner and metronome. A passion project that demonstrates my dedication to creating meaningful, community-focused applications.",
     technologies: ["Next", "React", "TypeScript", "Django", "AWS"],
     liveUrl: "https://www.irishtrad.ie",
     image: "/images/projects/irishtrad.webp",

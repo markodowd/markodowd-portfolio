@@ -31,7 +31,7 @@ export default function Footer() {
             <div>
               <h3 className="mb-4 text-lg font-semibold">Mark O'Dowd Portfolio</h3>
               <p className="text-sm text-muted-foreground">
-                Fullstack developer passionate about creating amazing web
+                Full-stack developer passionate about creating amazing web
                 experiences.
               </p>
             </div>

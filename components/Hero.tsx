@@ -139,7 +139,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <span>Fullstack Developer</span>
+            <span>Full-stack Developer</span>
             <span className="text-muted-foreground/50">•</span>
             <span>AWS Certified</span>
           </motion.div>

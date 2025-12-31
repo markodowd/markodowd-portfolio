@@ -33,28 +33,30 @@ export default function About() {
           <ScrollAnimation direction="right" delay={0.1}>
             <div className="space-y-4">
               <p className="text-muted-foreground">
-                I&apos;m a passionate developer with a love for creating elegant
-                solutions to complex problems. With experience in both frontend and
-                backend technologies, I bring a holistic approach to web development.
+                I&apos;m a full-stack software developer with experience building modern web
+                applications across the entire stack—from polished, accessible user interfaces
+                to backend APIs, databases, and cloud infrastructure on AWS. I approach problems
+                holistically, understanding how each layer of a system fits together to make
+                thoughtful architectural decisions.
               </p>
               <p className="text-muted-foreground">
-                I started my journey in web development with a curiosity about how
-                things work on the internet. Over the years, I&apos;ve honed my
-                skills in various technologies and frameworks, always staying
-                up-to-date with the latest trends and best practices.
+                I care deeply about code quality, performance, and long-term maintainability,
+                preferring clear, pragmatic solutions over unnecessary complexity. My focus is
+                on building software that is fast, reliable, and easy to reason about, whether
+                that&apos;s a small product feature or a large, scalable system.
               </p>
               <p className="text-muted-foreground">
-                My approach combines technical expertise with a focus on user
-                experience, ensuring that every project I work on is both
-                functional and delightful to use. I specialize in building modern web applications that are fast,
-                scalable, and maintainable. Whether it&apos;s a simple landing
-                page or a complex enterprise application, I bring the same level
-                of dedication and attention to detail.
+                When working on projects, I value clear communication, ownership, and turning
+                ambiguous requirements into well-structured, dependable solutions. I enjoy
+                collaborating closely with designers, stakeholders, and other engineers to
+                deliver meaningful results incrementally, with a strong emphasis on user
+                experience.
               </p>
               <p className="text-muted-foreground">
-                When I&apos;m not coding, I enjoy contributing to open-source
-                projects, writing technical articles, and exploring new
-                technologies.
+                Outside of development, I enjoy exploring interests beyond code—details of which
+                you can find in the Hobbies &amp; Interests section below—which helps me stay
+                curious, balanced, and continuously improving as both a developer and a
+                problem-solver.
               </p>
             </div>
           </ScrollAnimation>

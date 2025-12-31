@@ -132,27 +132,16 @@ export default function Hero() {
             </motion.span>
           </motion.h2>
 
-          {/* Badge/tag for credentials */}
+          {/* Credentials as simple text */}
           <motion.div
-            className="flex items-center justify-center gap-3 flex-wrap"
+            className="flex items-center justify-center gap-2 flex-wrap text-base sm:text-lg md:text-xl text-muted-foreground"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <motion.span
-              className="px-4 py-1.5 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 backdrop-blur-sm"
-              whileHover={{ scale: 1.05, backgroundColor: "oklch(var(--primary) / 0.2)" }}
-              transition={{ type: "spring", stiffness: 400 }}
-            >
-              Fullstack Developer
-            </motion.span>
-            <motion.span
-              className="px-4 py-1.5 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 backdrop-blur-sm"
-              whileHover={{ scale: 1.05, backgroundColor: "oklch(var(--primary) / 0.2)" }}
-              transition={{ type: "spring", stiffness: 400 }}
-            >
-              AWS Certified
-            </motion.span>
+            <span>Fullstack Developer</span>
+            <span className="text-muted-foreground/50">•</span>
+            <span>AWS Certified</span>
           </motion.div>
 
           {/* Enhanced description with better animation */}

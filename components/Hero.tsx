@@ -165,12 +165,6 @@ export default function Hero() {
             I build{" "}
             <span className="relative inline-block font-semibold text-foreground">
               modern web applications
-              <motion.span
-                className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary/30"
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ delay: 1.2, duration: 0.6 }}
-              />
             </span>
             {" "}with a focus on user experience,
             performance, and clean code. Passionate about creating digital

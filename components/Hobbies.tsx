@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Heart, Music, BookOpen, Camera, Code2, Gamepad2 } from "lucide-react";
 import { useMousePosition } from "@/hooks/use-mouse-position";
+import ScrollAnimation from "@/components/ScrollAnimation";
 
 interface Hobby {
   name: string;
@@ -49,22 +50,22 @@ export default function Hobbies() {
         }}
       />
       <div className="relative mx-auto max-w-6xl z-10">
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
-            Hobbies & Interests
-          </h2>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Things I enjoy doing outside of work that keep me balanced and
-            inspired.
-          </p>
-        </div>
+        <ScrollAnimation direction="up">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
+              Hobbies & Interests
+            </h2>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              Things I enjoy doing outside of work that keep me balanced and
+              inspired.
+            </p>
+          </div>
+        </ScrollAnimation>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {hobbies.map((hobby, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg flex flex-col"
-            >
+            <ScrollAnimation key={index} direction="up" delay={0.1 + index * 0.1}>
+              <div className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg flex flex-col">
               <div className="mb-4 flex items-start gap-4 flex-grow">
                 {hobby.icon && (
                   <div className="rounded-lg bg-primary/10 p-3">
@@ -98,7 +99,8 @@ export default function Hobbies() {
                   />
                 </div>
               )}
-            </div>
+              </div>
+            </ScrollAnimation>
           ))}
         </div>
       </div>

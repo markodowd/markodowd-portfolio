@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Award, Calendar } from "lucide-react";
 import { useMousePosition } from "@/hooks/use-mouse-position";
+import ScrollAnimation from "@/components/ScrollAnimation";
 
 interface Certificate {
   title: string;
@@ -52,22 +53,22 @@ export default function Certificates() {
         }}
       />
       <div className="relative mx-auto max-w-6xl z-10">
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
-            Certifications
-          </h2>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Professional certifications and courses that demonstrate my
-            commitment to continuous learning and professional development.
-          </p>
-        </div>
+        <ScrollAnimation direction="up">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
+              Certifications
+            </h2>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              Professional certifications and courses that demonstrate my
+              commitment to continuous learning and professional development.
+            </p>
+          </div>
+        </ScrollAnimation>
 
         <div className="grid gap-6 md:grid-cols-2">
           {certificates.map((certificate, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg flex flex-col"
-            >
+            <ScrollAnimation key={index} direction="up" delay={0.1 + index * 0.1}>
+              <div className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg flex flex-col">
               <div className="mb-4 flex items-start justify-between gap-4">
                 <div className="flex flex-col flex-1">
                   <h3 className="text-xl font-semibold">
@@ -118,7 +119,8 @@ export default function Certificates() {
                   </a>
                 )}
               </div>
-            </div>
+              </div>
+            </ScrollAnimation>
           ))}
         </div>
       </div>

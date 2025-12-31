@@ -1,4 +1,7 @@
+"use client";
+
 import { Github, Linkedin, Mail, Twitter, MessageSquare } from "lucide-react";
+import ScrollAnimation from "@/components/ScrollAnimation";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -23,57 +26,61 @@ export default function Footer() {
   return (
     <footer className="border-t border-border bg-muted/30">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-8 md:grid-cols-3">
-          <div>
-            <h3 className="mb-4 text-lg font-semibold">Mark O'Dowd Portfolio</h3>
-            <p className="text-sm text-muted-foreground">
-              Fullstack developer passionate about creating amazing web
-              experiences.
-            </p>
-          </div>
+        <ScrollAnimation direction="up">
+          <div className="grid gap-8 md:grid-cols-3">
+            <div>
+              <h3 className="mb-4 text-lg font-semibold">Mark O'Dowd Portfolio</h3>
+              <p className="text-sm text-muted-foreground">
+                Fullstack developer passionate about creating amazing web
+                experiences.
+              </p>
+            </div>
 
-          <div>
-            <h3 className="mb-4 text-lg font-semibold">Navigation</h3>
-            <nav className="flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </nav>
-          </div>
-
-          <div>
-            <h3 className="mb-4 text-lg font-semibold">Connect</h3>
-            <div className="flex gap-4">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
+            <div>
+              <h3 className="mb-4 text-lg font-semibold">Navigation</h3>
+              <nav className="flex flex-col gap-2">
+                {navLinks.map((link) => (
                   <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-lg p-2 transition-colors hover:bg-accent"
-                    aria-label={social.label}
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
-                    <Icon className="h-5 w-5" />
+                    {link.label}
                   </a>
-                );
-              })}
+                ))}
+              </nav>
+            </div>
+
+            <div>
+              <h3 className="mb-4 text-lg font-semibold">Connect</h3>
+              <div className="flex gap-4">
+                {socialLinks.map((social) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-lg p-2 transition-colors hover:bg-accent"
+                      aria-label={social.label}
+                    >
+                      <Icon className="h-5 w-5" />
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
+        </ScrollAnimation>
 
-        <div className="mt-8 border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>
-            © {currentYear} Mark O'Dowd. All rights reserved.
-          </p>
-        </div>
+        <ScrollAnimation direction="fade" delay={0.2}>
+          <div className="mt-8 border-t border-border pt-8 text-center text-sm text-muted-foreground">
+            <p>
+              © {currentYear} Mark O'Dowd. All rights reserved.
+            </p>
+          </div>
+        </ScrollAnimation>
       </div>
     </footer>
   );

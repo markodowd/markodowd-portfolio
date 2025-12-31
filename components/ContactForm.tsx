@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Mail, Send } from "lucide-react";
 import { useMousePosition } from "@/hooks/use-mouse-position";
+import ScrollAnimation from "@/components/ScrollAnimation";
 
 export default function ContactForm() {
   const { mousePosition, ref } = useMousePosition();
@@ -55,16 +56,19 @@ export default function ContactForm() {
         }}
       />
       <div className="relative mx-auto max-w-2xl z-10">
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
-            Get In Touch
-          </h2>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Have a question or want to work together? Feel free to reach out!
-          </p>
-        </div>
+        <ScrollAnimation direction="up">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
+              Get In Touch
+            </h2>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              Have a question or want to work together? Feel free to reach out!
+            </p>
+          </div>
+        </ScrollAnimation>
 
-        <div className="rounded-lg border border-border bg-card p-8 shadow-lg">
+        <ScrollAnimation direction="up" delay={0.1}>
+          <div className="rounded-lg border border-border bg-card p-8 shadow-lg">
           <form onSubmit={onSubmit} className="space-y-6">
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="space-y-2">
@@ -159,7 +163,8 @@ export default function ContactForm() {
               </a>
             </p>
           </div>
-        </div>
+          </div>
+        </ScrollAnimation>
       </div>
     </section>
   );

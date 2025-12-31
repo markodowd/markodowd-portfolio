@@ -4,6 +4,7 @@ import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useMousePosition } from "@/hooks/use-mouse-position";
+import ScrollAnimation from "@/components/ScrollAnimation";
 
 interface Project {
   title: string;
@@ -49,22 +50,22 @@ export default function Projects() {
         }}
       />
       <div className="relative mx-auto max-w-6xl z-10">
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
-            Featured Projects
-          </h2>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            A collection of projects I&apos;ve worked on, showcasing my skills
-            and experience in web development.
-          </p>
-        </div>
+        <ScrollAnimation direction="up">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
+              Featured Projects
+            </h2>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              A collection of projects I&apos;ve worked on, showcasing my skills
+              and experience in web development.
+            </p>
+          </div>
+        </ScrollAnimation>
 
         <div className="grid gap-8 md:grid-cols-2">
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-lg border border-border bg-card transition-all hover:shadow-xl"
-            >
+            <ScrollAnimation key={index} direction="up" delay={0.1 + index * 0.1}>
+              <div className="group relative overflow-hidden rounded-lg border border-border bg-card transition-all hover:shadow-xl">
               <div className="p-6">
                 <div className="mb-4 flex items-start justify-between">
                   <h3 className="text-2xl font-semibold">{project.title}</h3>
@@ -106,7 +107,8 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-            </div>
+              </div>
+            </ScrollAnimation>
           ))}
         </div>
       </div>

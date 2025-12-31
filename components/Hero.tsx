@@ -210,7 +210,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.9 }}
         >
           {[
-            { icon: Github, href: "https://github.com", label: "GitHub" },
+            { icon: Github, href: "https://github.com/markodowd", label: "GitHub" },
             { icon: Linkedin, href: "https://www.linkedin.com/in/markodowd2/", label: "LinkedIn" },
             { icon: Twitter, href: "https://x.com/markodowd_dev", label: "X" },
             { icon: MessageSquare, href: "https://bsky.app/profile/markodowd.dev", label: "Bluesky" },

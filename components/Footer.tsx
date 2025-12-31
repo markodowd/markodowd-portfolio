@@ -16,7 +16,7 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { href: "https://github.com", icon: Github, label: "GitHub" },
+    { href: "https://github.com/markodowd", icon: Github, label: "GitHub" },
     { href: "https://www.linkedin.com/in/markodowd2/", icon: Linkedin, label: "LinkedIn" },
     { href: "https://x.com/markodowd_dev", icon: Twitter, label: "X" },
     { href: "https://bsky.app/profile/markodowd.dev", icon: MessageSquare, label: "Bluesky" },

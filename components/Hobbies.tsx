@@ -9,6 +9,7 @@ interface Hobby {
   description: string;
   icon?: React.ReactNode;
   image?: string;
+  link?: string;
 }
 
 const hobbies: Hobby[] = [
@@ -24,8 +25,9 @@ const hobbies: Hobby[] = [
   },
   {
     name: "Chess",
-    description: "Fascinated by tech books, science fiction, and personal development.",
+    description: "I enjoy the strategic depth and mental challenge of chess. I play on Lichess, which I use because of its open source nature. I'm open to friendly challenges!",
     image: "/images/hobbies/chess.webp",
+    link: "https://lichess.org/@/modowd91",
   },
 ];
 
@@ -73,6 +75,16 @@ export default function Hobbies() {
                   <p className="text-sm text-muted-foreground">
                     {hobby.description}
                   </p>
+                  {hobby.link && (
+                    <a
+                      href={hobby.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-2 inline-block text-sm text-primary hover:underline"
+                    >
+                      Lichess Profile
+                    </a>
+                  )}
                 </div>
               </div>
               {hobby.image && (

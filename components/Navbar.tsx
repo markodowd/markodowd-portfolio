@@ -11,6 +11,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { href: "#hero", label: "Home" },
@@ -115,18 +116,26 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Mobile Menu Button */}
-          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-            <SheetTrigger asChild className="md:hidden absolute right-0">
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Open menu</span>
-              </Button>
-            </SheetTrigger>
+          {/* Desktop Theme Toggle */}
+          <div className="hidden md:block absolute right-4">
+            <ThemeToggle />
+          </div>
+
+          {/* Mobile Menu Button and Theme Toggle */}
+          <div className="md:hidden absolute right-0 flex items-center gap-2">
+            <ThemeToggle />
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Open menu</span>
+                </Button>
+              </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col gap-4 mt-8">
-                <div className="mb-4 px-4">
+                <div className="mb-4 px-4 flex items-center justify-between">
                   <SheetTitle className="text-lg font-semibold">Navigation</SheetTitle>
+                  <ThemeToggle />
                 </div>
                 {navLinks.map((link) => {
                   const sectionId = link.href.substring(1);
@@ -152,6 +161,7 @@ export default function Navbar() {
               </div>
             </SheetContent>
           </Sheet>
+          </div>
         </div>
       </div>
     </nav>

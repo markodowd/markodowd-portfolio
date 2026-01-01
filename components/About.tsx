@@ -34,7 +34,7 @@ export default function About() {
             <div className="space-y-4">
               <p className="text-muted-foreground">
                 I&apos;m a full-stack software developer with experience building modern web
-                applications across the entire stack—from polished, accessible user interfaces
+                applications across the entire stack from polished, accessible user interfaces
                 to backend APIs, databases, and cloud infrastructure on AWS. I approach problems
                 holistically, understanding how each layer of a system fits together to make
                 thoughtful architectural decisions.
@@ -53,8 +53,7 @@ export default function About() {
                 experience.
               </p>
               <p className="text-muted-foreground">
-                Outside of development, I enjoy exploring interests beyond code—details of which
-                you can find in the Hobbies &amp; Interests section below—which helps me stay
+                Outside of development, I enjoy exploring interests beyond code (Hobbies &amp; Interests below) which helps me stay
                 curious, balanced, and continuously improving as both a developer and a
                 problem-solver.
               </p>

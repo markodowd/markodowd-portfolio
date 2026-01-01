@@ -65,8 +65,8 @@ export default function Hobbies() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {hobbies.map((hobby, index) => (
             <ScrollAnimation key={index} direction="up" delay={0.1 + index * 0.1}>
-              <div className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg flex flex-col">
-              <div className="mb-4 flex items-start gap-4 flex-grow">
+              <div className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg flex flex-col h-full">
+              <div className="mb-4 flex items-start gap-4 flex-1">
                 {hobby.icon && (
                   <div className="rounded-lg bg-primary/10 p-3">
                     {hobby.icon}

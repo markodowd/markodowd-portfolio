@@ -15,13 +15,13 @@ interface Hobby {
 
 const hobbies: Hobby[] = [
   {
-    name: "Jujitsu",
-    description: "I've been practicing Japanese Jiu-Jitsu with the World Jiu-Jitsu Federation Ireland (WJJF) for about 8 years. I should be achieving my black belt soon, which represents years of dedication and discipline.",
+    name: "Ju-Jitsu",
+    description: "I've been training in Ju-Jitsu (Japanese) under the World Ju-Jitsu Federation Ireland for almost a decade now. I'm aiming to earn a black belt soon which will represent years of dedication and discipline being recognised",
     image: "/images/hobbies/jujitsu.webp",
   },
   {
     name: "Music & Instruments",
-    description: "I've been playing guitar for more than 25 years and banjo for 4 years. I play in traditional Irish sessions, which I enjoy for both the performance aspect and the social nature of the gatherings.",
+    description: "I've been playing guitar for more than 25 years and irish banjo more recently. I play in traditional Irish sessions, which I enjoy for both the performance aspect and the social nature of the gatherings.",
     image: "/images/hobbies/banjo.webp",
     link: "https://www.youtube.com/@MarkODowd-IrishTenorBanjo",
   },

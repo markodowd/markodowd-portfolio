@@ -133,9 +133,8 @@ export default function Navbar() {
               </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col gap-4 mt-8">
-                <div className="mb-4 px-4 flex items-center justify-between">
+                <div className="mb-4 px-4">
                   <SheetTitle className="text-lg font-semibold">Navigation</SheetTitle>
-                  <ThemeToggle />
                 </div>
                 {navLinks.map((link) => {
                   const sectionId = link.href.substring(1);

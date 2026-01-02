@@ -119,21 +119,70 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   html {
     scroll-behavior: smooth;
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+    /* Hide scrollbar for IE and Edge */
+    -ms-overflow-style: none;
   }
+
+  html::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Chrome, Safari, Opera */
+  }
+
   body {
     @apply bg-background text-foreground;
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+    /* Hide scrollbar for IE and Edge */
+    -ms-overflow-style: none;
   }
+
+  body::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Chrome, Safari, Opera */
+  }
+}
+
+/* Global scrollbar hiding - applied outside layer for higher specificity */
+html,
+body {
+  scrollbar-width: none !important;
+  /* Firefox */
+  -ms-overflow-style: none !important;
+  /* IE and Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+  /* Chrome, Safari, Opera */
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  display: none !important;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  display: none !important;
 }
 
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -143,12 +192,15 @@
   0% {
     background-position: 0% 0%;
   }
+
   33% {
     background-position: 100% 50%;
   }
+
   66% {
     background-position: 50% 100%;
   }
+
   100% {
     background-position: 0% 0%;
   }
@@ -158,6 +210,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -167,9 +220,11 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }

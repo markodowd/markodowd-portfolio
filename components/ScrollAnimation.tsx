@@ -43,7 +43,7 @@ export default function ScrollAnimation({
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, margin: "-100px" }}
+      viewport={{ once: false, margin: "50px" }}
       transition={{
         duration: 0.6,
         delay,

@@ -65,7 +65,7 @@ export default function Projects() {
         <div className="grid gap-8 md:grid-cols-2">
           {projects.map((project, index) => (
             <ScrollAnimation key={index} direction="up" delay={0.1 + index * 0.1}>
-              <div className="group relative overflow-hidden rounded-lg border border-border bg-card transition-all hover:shadow-xl">
+              <div className="group relative overflow-hidden rounded-lg border border-border bg-card transition-all hover:border-primary hover:shadow-lg hover:scale-105">
               <div className="p-6">
                 <div className="mb-4 flex items-start justify-between">
                   <h3 className="text-2xl font-semibold">{project.title}</h3>

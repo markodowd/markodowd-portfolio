@@ -68,7 +68,7 @@ export default function Certificates() {
         <div className="grid gap-6 md:grid-cols-2">
           {certificates.map((certificate, index) => (
             <ScrollAnimation key={index} direction="up" delay={0.1 + index * 0.1}>
-              <div className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg flex flex-col">
+              <div className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg hover:scale-105 flex flex-col">
               <div className="mb-4 flex items-start justify-between gap-4">
                 <div className="flex flex-col flex-1">
                   <h3 className="text-xl font-semibold">

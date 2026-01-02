@@ -21,7 +21,7 @@ const hobbies: Hobby[] = [
   },
   {
     name: "Music & Instruments",
-    description: "I've been playing guitar for more than 25 years and irish banjo more recently. I play in traditional Irish sessions, which I enjoy for both the performance aspect and the social nature of the gatherings.",
+    description: "I've been playing guitar for more than 25 years and Irish banjo more recently. I play in traditional Irish sessions, which I enjoy for both the performance aspect and the social nature of the gatherings.",
     image: "/images/hobbies/banjo.webp",
     link: "https://www.youtube.com/@MarkODowd-IrishTenorBanjo",
   },

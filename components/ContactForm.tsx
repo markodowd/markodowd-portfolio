@@ -136,7 +136,7 @@ export default function ContactForm() {
             <Button
               type="submit"
               disabled={state.submitting}
-              className="w-full"
+              className="w-full cursor-pointer"
               size="lg"
             >
               {state.submitting ? (

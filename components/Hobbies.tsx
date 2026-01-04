@@ -1,15 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { Heart, Music, BookOpen, Camera, Code2, Gamepad2 } from "lucide-react";
 import { useMousePosition } from "@/hooks/use-mouse-position";
 import ScrollAnimation from "@/components/ScrollAnimation";
 
 interface Hobby {
   name: string;
   description: string;
-  icon?: React.ReactNode;
-  image?: string;
+  image: string;
   link?: string;
 }
 
@@ -66,13 +64,7 @@ export default function Hobbies() {
           {hobbies.map((hobby, index) => (
             <ScrollAnimation key={index} direction="up" delay={0.1 + index * 0.1}>
               <div className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg hover:scale-105 flex flex-col h-full">
-              <div className="mb-4 flex items-start gap-4 flex-1">
-                {hobby.icon && (
-                  <div className="rounded-lg bg-primary/10 p-3">
-                    {hobby.icon}
-                  </div>
-                )}
-                <div className="flex-1">
+                <div className="mb-4 flex-1">
                   <h3 className="mb-2 text-xl font-semibold">{hobby.name}</h3>
                   <p className="text-sm text-muted-foreground">
                     {hobby.description}
@@ -88,8 +80,6 @@ export default function Hobbies() {
                     </a>
                   )}
                 </div>
-              </div>
-              {hobby.image && (
                 <div className="relative w-full h-64 rounded-lg overflow-hidden bg-muted/50">
                   <Image
                     src={hobby.image}
@@ -98,7 +88,6 @@ export default function Hobbies() {
                     className="object-cover"
                   />
                 </div>
-              )}
               </div>
             </ScrollAnimation>
           ))}

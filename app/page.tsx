@@ -4,7 +4,7 @@ import Projects from "@/components/projects/Projects";
 import Certificates from "@/components/certificates/Certificates";
 import Hobbies from "@/components/hobbies/Hobbies";
 import Contact from "@/components/contact/Contact";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer/Footer";
 
 export default function Home() {
   return (

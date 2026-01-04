@@ -33,7 +33,7 @@ export default function About() {
           <ScrollAnimation direction="right" delay={0.1}>
             <div className="space-y-4">
               <p className="text-muted-foreground">
-                I&apos;m a full-stack software developer with experience building modern web
+                I&apos;m a full-stack software developer from Ireland with experience building modern web
                 applications across the entire stack from polished, accessible user interfaces
                 to backend APIs, databases, and cloud infrastructure on AWS. I approach problems
                 holistically, understanding how each layer of a system fits together to make

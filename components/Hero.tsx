@@ -143,6 +143,8 @@ export default function Hero() {
             <span>Full-stack Developer</span>
             <span className="text-muted-foreground/50">•</span>
             <span>AWS Certified</span>
+            <span className="text-muted-foreground/50">•</span>
+            <span>Based in Ireland</span>
           </motion.div>
 
           {/* Enhanced description with better animation */}

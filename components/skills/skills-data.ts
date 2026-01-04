@@ -16,6 +16,8 @@ export const skills: Skill[] = [
   { name: "Express", icon: "siExpress", category: "Backend" },
   { name: "Django", icon: "siDjango", category: "Backend" },
   { name: "Python", icon: "siPython", category: "Backend" },
+  { name: "PostgreSQL", icon: "siPostgresql", category: "Backend" },
+  { name: "SQL", icon: "siSql", category: "Backend" },
   
   // DevOps
   { name: "AWS", icon: "siAmazonaws", category: "DevOps" },

@@ -1,5 +1,5 @@
 import Hero from "@/components/hero/Hero";
-import About from "@/components/About";
+import About from "@/components/about/About";
 import Projects from "@/components/Projects";
 import Certificates from "@/components/Certificates";
 import Hobbies from "@/components/Hobbies";

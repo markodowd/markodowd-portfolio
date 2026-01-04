@@ -23,12 +23,14 @@ export const skills: Skill[] = [
   { name: "AWS", icon: "siAmazonaws", category: "DevOps" },
   { name: "Docker", icon: "siDocker", category: "DevOps" },
   { name: "GitHub Actions", icon: "siGithubactions", category: "DevOps" },
+  { name: "Terraform", icon: "siTerraform", category: "DevOps" },
   
   // Tools
   { name: "Linux", icon: "siLinux", category: "Tools" },
   { name: "Bash", icon: "siGnubash", category: "Tools" },
   { name: "Git", icon: "siGit", category: "Tools" },
   { name: "GitHub", icon: "siGithub", category: "Tools" },
+  { name: "Vim", icon: "siVim", category: "Tools" },
 ];
 
 export const categories: ("Frontend" | "Backend" | "DevOps" | "Tools")[] = [

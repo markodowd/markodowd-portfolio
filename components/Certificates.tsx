@@ -9,10 +9,10 @@ interface Certificate {
   title: string;
   issuer: string;
   date: string;
-  description?: string;
-  image?: string;
-  credentialId?: string;
-  credentialUrl?: string;
+  description: string;
+  image: string;
+  credentialId: string;
+  credentialUrl: string;
 }
 
 const certificates: Certificate[] = [
@@ -68,27 +68,30 @@ export default function Certificates() {
         <div className="grid gap-6 md:grid-cols-2">
           {certificates.map((certificate, index) => (
             <ScrollAnimation key={index} direction="up" delay={0.1 + index * 0.1}>
-              <div className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg hover:scale-105 flex flex-col">
-              <div className="mb-4 flex items-start justify-between gap-4">
-                <div className="flex flex-col flex-1">
-                  <h3 className="text-xl font-semibold">
-                    {certificate.title}
-                  </h3>
-                  <p className="text-sm font-medium text-muted-foreground">
-                    {certificate.issuer}
-                  </p>
+              <a
+                href={certificate.credentialUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg hover:scale-105 flex flex-col cursor-pointer"
+                aria-label={`View ${certificate.title} credential`}
+              >
+                <div className="mb-4 flex items-start justify-between gap-4">
+                  <div className="flex flex-col flex-1">
+                    <h3 className="text-xl font-semibold">
+                      {certificate.title}
+                    </h3>
+                    <p className="text-sm font-medium text-muted-foreground">
+                      {certificate.issuer}
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-primary/10 p-3 flex-shrink-0">
+                    <Award className="h-6 w-6 text-primary" />
+                  </div>
                 </div>
-                <div className="rounded-lg bg-primary/10 p-3 flex-shrink-0">
-                  <Award className="h-6 w-6 text-primary" />
-                </div>
-              </div>
-              <div className="flex-1">
-                {certificate.description && (
+                <div className="flex-1">
                   <p className="mb-4 text-sm text-muted-foreground">
                     {certificate.description}
                   </p>
-                )}
-                {certificate.image && (
                   <div className="mb-3 w-full">
                     <Image
                       src={certificate.image}
@@ -98,28 +101,18 @@ export default function Certificates() {
                       className="w-full h-auto rounded-lg object-cover"
                     />
                   </div>
-                )}
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Calendar className="h-4 w-4" />
-                  <span>{certificate.date}</span>
-                </div>
-                {certificate.credentialId && (
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Calendar className="h-4 w-4" />
+                    <span>{certificate.date}</span>
+                  </div>
                   <p className="mt-2 text-xs text-muted-foreground">
                     Credential ID: {certificate.credentialId}
                   </p>
-                )}
-                {certificate.credentialUrl && (
-                  <a
-                    href={certificate.credentialUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-block text-sm font-medium text-primary hover:underline"
-                  >
+                  <div className="mt-3 text-sm font-medium text-primary pointer-events-none">
                     View Credential →
-                  </a>
-                )}
-              </div>
-              </div>
+                  </div>
+                </div>
+              </a>
             </ScrollAnimation>
           ))}
         </div>

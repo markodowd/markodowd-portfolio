@@ -1,7 +1,6 @@
 "use client";
 
 import { ExternalLink } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
 import { useMousePosition } from "@/hooks/use-mouse-position";
 import ScrollAnimation from "@/components/ScrollAnimation";
@@ -10,8 +9,8 @@ interface Project {
   title: string;
   description: string;
   technologies: string[];
-  liveUrl?: string;
-  image?: string;
+  liveUrl: string;
+  image: string;
 }
 
 const projects: Project[] = [
@@ -65,28 +64,25 @@ export default function Projects() {
         <div className="grid gap-8 md:grid-cols-2">
           {projects.map((project, index) => (
             <ScrollAnimation key={index} direction="up" delay={0.1 + index * 0.1}>
-              <div className="group relative overflow-hidden rounded-lg border border-border bg-card transition-all hover:border-primary hover:shadow-lg hover:scale-105">
-              <div className="p-6">
-                <div className="mb-4 flex items-start justify-between">
-                  <h3 className="text-2xl font-semibold">{project.title}</h3>
-                  <div className="flex gap-2">
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="rounded-lg p-2 transition-colors hover:bg-accent"
-                        aria-label="Live Demo"
-                      >
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block overflow-hidden rounded-lg border border-border bg-card transition-all hover:border-primary hover:shadow-lg hover:scale-105 cursor-pointer"
+                aria-label={`View ${project.title} project`}
+              >
+                <div className="p-6">
+                  <div className="mb-4 flex items-start justify-between">
+                    <h3 className="text-2xl font-semibold">{project.title}</h3>
+                    <div className="flex gap-2">
+                      <div className="rounded-lg p-2 transition-colors group-hover:bg-accent pointer-events-none">
                         <ExternalLink className="h-5 w-5" />
-                      </a>
-                    )}
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <p className="mb-4 text-muted-foreground">
-                  {project.description}
-                </p>
-                {project.image && (
+                  <p className="mb-4 text-muted-foreground">
+                    {project.description}
+                  </p>
                   <div className="mb-4 relative w-full aspect-video rounded-lg overflow-hidden">
                     <Image
                       src={project.image}
@@ -95,19 +91,18 @@ export default function Projects() {
                       className="object-cover"
                     />
                   </div>
-                )}
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              </div>
+              </a>
             </ScrollAnimation>
           ))}
         </div>

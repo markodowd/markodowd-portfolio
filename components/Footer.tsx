@@ -1,6 +1,7 @@
 "use client";
 
-import { Github, Linkedin, Mail, Twitter, MessageSquare } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
+import { SimpleIcon } from "@/components/SimpleIcon";
 import ScrollAnimation from "@/components/ScrollAnimation";
 
 export default function Footer() {
@@ -16,11 +17,11 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { href: "https://github.com/markodowd", icon: Github, label: "GitHub" },
-    { href: "https://www.linkedin.com/in/markodowd2/", icon: Linkedin, label: "LinkedIn" },
-    { href: "https://x.com/markodowd_dev", icon: Twitter, label: "X" },
-    { href: "https://bsky.app/profile/markodowd.dev", icon: MessageSquare, label: "Bluesky" },
-    { href: "mailto:contact@markodowd.dev", icon: Mail, label: "Email" },
+    { href: "https://github.com/markodowd", icon: "siGithub", label: "GitHub", isSimpleIcon: true },
+    { href: "https://www.linkedin.com/in/markodowd2/", icon: Linkedin, label: "LinkedIn", isSimpleIcon: false },
+    { href: "https://x.com/markodowd_dev", icon: "siX", label: "X", isSimpleIcon: true },
+    { href: "https://bsky.app/profile/markodowd.dev", icon: "siBluesky", label: "Bluesky", isSimpleIcon: true },
+    { href: "mailto:contact@markodowd.dev", icon: Mail, label: "Email", isSimpleIcon: false },
   ];
 
   return (
@@ -55,7 +56,7 @@ export default function Footer() {
               <h3 className="mb-4 text-lg font-semibold">Connect</h3>
               <div className="flex gap-4">
                 {socialLinks.map((social) => {
-                  const Icon = social.icon;
+                  const IconComponent = social.isSimpleIcon ? null : social.icon;
                   return (
                     <a
                       key={social.label}
@@ -65,7 +66,14 @@ export default function Footer() {
                       className="rounded-lg p-2 transition-colors hover:bg-accent"
                       aria-label={social.label}
                     >
-                      <Icon className="h-5 w-5" />
+                      {social.isSimpleIcon ? (
+                        <SimpleIcon 
+                          icon={social.icon as keyof typeof import("simple-icons")} 
+                          className="h-5 w-5" 
+                        />
+                      ) : (
+                        IconComponent && <IconComponent className="h-5 w-5" />
+                      )}
                     </a>
                   );
                 })}

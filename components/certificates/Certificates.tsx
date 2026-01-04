@@ -1,7 +1,7 @@
 "use client";
 
 import { useMousePosition } from "@/hooks/use-mouse-position";
-import { CertificatesBackground } from "./CertificatesBackground";
+import { SectionBackground } from "@/components/shared/SectionBackground";
 import { CertificatesHeader } from "./CertificatesHeader";
 import { CertificateCard } from "./CertificateCard";
 
@@ -45,7 +45,7 @@ export default function Certificates() {
       id="certificates"
       className="relative bg-gradient-to-b from-background via-background to-muted/20 px-4 py-20 sm:px-6 lg:px-8 overflow-hidden"
     >
-      <CertificatesBackground mousePosition={mousePosition} />
+      <SectionBackground mousePosition={mousePosition} opacity={0.15} />
       <div className="relative mx-auto max-w-6xl z-10">
         <CertificatesHeader />
         <div className="grid gap-6 md:grid-cols-2">

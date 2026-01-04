@@ -1,7 +1,7 @@
 "use client";
 
 import { useMousePosition } from "@/hooks/use-mouse-position";
-import { ProjectsBackground } from "./ProjectsBackground";
+import { SectionBackground } from "@/components/shared/SectionBackground";
 import { ProjectsHeader } from "./ProjectsHeader";
 import { ProjectCard } from "./ProjectCard";
 
@@ -41,7 +41,7 @@ export default function Projects() {
       id="projects"
       className="relative bg-gradient-to-br from-muted/50 via-muted/40 to-primary/10 px-4 py-20 sm:px-6 lg:px-8 overflow-hidden"
     >
-      <ProjectsBackground mousePosition={mousePosition} />
+      <SectionBackground mousePosition={mousePosition} opacity={0.2} />
       <div className="relative mx-auto max-w-6xl z-10">
         <ProjectsHeader />
         <div className="grid gap-8 md:grid-cols-2">

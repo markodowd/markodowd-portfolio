@@ -1,7 +1,7 @@
 "use client";
 
 import { useMousePosition } from "@/hooks/use-mouse-position";
-import { SkillsBackground } from "./SkillsBackground";
+import { SectionBackground } from "@/components/shared/SectionBackground";
 import { SkillsHeader } from "./SkillsHeader";
 import { SkillCard } from "./SkillCard";
 import { skills, categories } from "./skills-data";
@@ -22,7 +22,7 @@ export default function Skills() {
       id="skills"
       className="relative bg-gradient-to-br from-muted/40 via-background to-primary/5 px-4 py-20 sm:px-6 lg:px-8 overflow-hidden"
     >
-      <SkillsBackground mousePosition={mousePosition} />
+      <SectionBackground mousePosition={mousePosition} opacity={0.2} />
       <div className="relative mx-auto max-w-6xl z-10">
         <SkillsHeader />
         

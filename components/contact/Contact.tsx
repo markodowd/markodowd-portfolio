@@ -1,7 +1,7 @@
 "use client";
 
 import { useMousePosition } from "@/hooks/use-mouse-position";
-import ScrollAnimation from "@/components/ScrollAnimation";
+import ScrollAnimation from "@/components/shared/ScrollAnimation";
 import { ContactBackground } from "./ContactBackground";
 import { ContactHeader } from "./ContactHeader";
 import { ContactForm } from "./ContactForm";

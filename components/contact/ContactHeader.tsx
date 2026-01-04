@@ -1,6 +1,6 @@
 "use client";
 
-import ScrollAnimation from "@/components/ScrollAnimation";
+import ScrollAnimation from "@/components/shared/ScrollAnimation";
 
 export function ContactHeader() {
   return (

@@ -2,7 +2,7 @@
 
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
-import ScrollAnimation from "@/components/ScrollAnimation";
+import ScrollAnimation from "@/components/shared/ScrollAnimation";
 
 interface Project {
   title: string;

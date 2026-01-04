@@ -11,7 +11,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import ThemeToggle from "@/components/ThemeToggle";
+import ThemeToggle from "@/components/theme/ThemeToggle";
 
 const navLinks = [
   { href: "#hero", label: "Home" },

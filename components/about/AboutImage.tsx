@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import ScrollAnimation from "@/components/ScrollAnimation";
+import ScrollAnimation from "@/components/shared/ScrollAnimation";
 
 export function AboutImage() {
   return (

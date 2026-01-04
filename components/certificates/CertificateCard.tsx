@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Award, Calendar } from "lucide-react";
-import ScrollAnimation from "@/components/ScrollAnimation";
+import ScrollAnimation from "@/components/shared/ScrollAnimation";
 
 interface Certificate {
   title: string;

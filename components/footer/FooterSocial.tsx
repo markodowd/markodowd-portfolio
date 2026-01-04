@@ -1,7 +1,7 @@
 "use client";
 
 import { Linkedin, Mail } from "lucide-react";
-import { SimpleIcon } from "@/components/SimpleIcon";
+import { SimpleIcon } from "@/components/shared/SimpleIcon";
 
 const socialLinks = [
   { href: "https://github.com/markodowd", icon: "siGithub", label: "GitHub", isSimpleIcon: true },

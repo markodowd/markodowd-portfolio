@@ -1,7 +1,7 @@
 "use client";
 
 import { Linkedin, Mail } from "lucide-react";
-import { SimpleIcon } from "@/components/SimpleIcon";
+import { SimpleIcon } from "@/components/shared/SimpleIcon";
 import { motion } from "framer-motion";
 
 const socialLinks = [

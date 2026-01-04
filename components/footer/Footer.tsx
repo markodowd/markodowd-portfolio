@@ -1,6 +1,6 @@
 "use client";
 
-import ScrollAnimation from "@/components/ScrollAnimation";
+import ScrollAnimation from "@/components/shared/ScrollAnimation";
 import { FooterInfo } from "./FooterInfo";
 import { FooterNavigation } from "./FooterNavigation";
 import { FooterSocial } from "./FooterSocial";

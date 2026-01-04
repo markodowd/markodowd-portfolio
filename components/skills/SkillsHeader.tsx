@@ -8,8 +8,7 @@ export function SkillsHeader() {
           Skills & Technologies
         </h2>
         <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-          Technologies and tools I use to build modern web applications and
-          deliver high-quality solutions.
+          As a full-stack developer, I&apos;m constantly experimenting with new tools, but these are the core technologies I focus on to build modern web applications and deliver high-quality solutions.
         </p>
       </div>
     </ScrollAnimation>

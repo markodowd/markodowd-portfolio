@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,28 +15,42 @@ import {
 import { cn } from "@/lib/utils";
 import ThemeToggle from "@/components/theme/ThemeToggle";
 
-const navLinks = [
+const baseNavLinks = [
   { href: "#hero", label: "Home", isHash: true },
   { href: "#about", label: "About", isHash: true },
   { href: "#projects", label: "Projects", isHash: true },
   { href: "#skills", label: "Skills", isHash: true },
   { href: "#certificates", label: "Certificates", isHash: true },
   { href: "#hobbies", label: "Hobbies", isHash: true },
-  { href: "/blog", label: "Blog", isHash: false },
   { href: "#contact", label: "Contact", isHash: true },
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Insert Blog link in the right position based on current route
+  const blogLink = isHomePage
+    ? { href: "#blog", label: "Blog", isHash: true }
+    : { href: "/#blog", label: "Blog", isHash: false };
+  
+  const navLinks = [
+    ...baseNavLinks.slice(0, 6),
+    blogLink,
+    ...baseNavLinks.slice(6),
+  ];
+
   useEffect(() => {
+    if (!isHomePage) return;
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
       // Update active section based on scroll position
-      const sections = navLinks.map((link) => link.href.substring(1));
+      const sections = ["hero", "about", "projects", "skills", "certificates", "hobbies", "blog", "contact"];
       const scrollPosition = window.scrollY + 150; // Offset for navbar + some padding
 
       // Check if we're at the top (hero section)
@@ -62,7 +78,7 @@ export default function Navbar() {
     handleScroll(); // Initial check
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isHomePage]);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, isHash: boolean) => {
     if (isHash) {
@@ -77,10 +93,32 @@ export default function Navbar() {
           behavior: "smooth",
         });
       }
+    } else if (href.startsWith("/#")) {
+      // Handle navigation from blog page back to homepage with hash
+      e.preventDefault();
+      window.location.href = href;
     }
     
     setIsMobileMenuOpen(false);
   };
+
+  // Handle scroll to blog section after navigation from blog page
+  useEffect(() => {
+    if (isHomePage && window.location.hash === "#blog") {
+      // Use a slight delay to ensure the page has rendered
+      const timeoutId = setTimeout(() => {
+        const element = document.getElementById("blog");
+        if (element) {
+          const offsetTop = element.offsetTop - 80;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth",
+          });
+        }
+      }, 150);
+      return () => clearTimeout(timeoutId);
+    }
+  }, [isHomePage, pathname]);
 
   return (
     <nav
@@ -98,6 +136,23 @@ export default function Navbar() {
             {navLinks.map((link) => {
               const sectionId = link.isHash ? link.href.substring(1) : "";
               const isActive = link.isHash && activeSection === sectionId;
+              
+              // Use Next.js Link for non-hash links that navigate to other pages
+              if (!link.isHash && link.href.startsWith("/")) {
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={cn(
+                      "relative px-4 py-2 text-sm font-medium transition-colors rounded-md",
+                      "text-muted-foreground hover:text-foreground hover:bg-accent"
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              }
               
               return (
                 <a
@@ -143,6 +198,23 @@ export default function Navbar() {
                 {navLinks.map((link) => {
                   const sectionId = link.isHash ? link.href.substring(1) : "";
                   const isActive = link.isHash && activeSection === sectionId;
+                  
+                  // Use Next.js Link for non-hash links that navigate to other pages
+                  if (!link.isHash && link.href.startsWith("/")) {
+                    const linkContent = (
+                      <Link
+                        href={link.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={cn(
+                          "block px-4 py-3 text-base font-medium transition-colors rounded-md",
+                          "text-muted-foreground hover:text-foreground hover:bg-accent"
+                        )}
+                      >
+                        {link.label}
+                      </Link>
+                    );
+                    return <div key={link.href}>{linkContent}</div>;
+                  }
                   
                   const linkContent = (
                     <a

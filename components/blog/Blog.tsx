@@ -37,7 +37,7 @@ export default function Blog({ posts }: BlogProps) {
         </div>
         <div className="mt-12 text-center">
           <Link href="/blog">
-            <Button variant="outline" size="lg" className="group">
+            <Button variant="outline" size="lg" className="group cursor-pointer">
               View All Articles
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>

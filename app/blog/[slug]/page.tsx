@@ -62,7 +62,7 @@ export default async function BlogPostPage({
         <div className="relative mx-auto max-w-6xl z-10">
           <div className="mb-8">
             <Link href="/blog">
-              <Button variant="ghost" size="sm" className="mb-4">
+              <Button variant="ghost" size="sm" className="cursor-pointer mb-4">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Blog
               </Button>

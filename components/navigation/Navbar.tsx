@@ -32,15 +32,25 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("hero");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Insert Blog link in the right position based on current route
+  // Convert all nav links to point to home page sections when not on home page
+  const navLinks = baseNavLinks.map((link) => {
+    if (isHomePage) {
+      return link; // Keep hash links on home page
+    } else {
+      // Convert to /#section format when on other pages
+      return { href: `/${link.href}`, label: link.label, isHash: false };
+    }
+  });
+  
+  // Insert Blog link in the right position
   const blogLink = isHomePage
     ? { href: "#blog", label: "Blog", isHash: true }
     : { href: "/#blog", label: "Blog", isHash: false };
   
-  const navLinks = [
-    ...baseNavLinks.slice(0, 6),
+  const finalNavLinks = [
+    ...navLinks.slice(0, 6),
     blogLink,
-    ...baseNavLinks.slice(6),
+    ...navLinks.slice(6),
   ];
 
   useEffect(() => {
@@ -133,11 +143,29 @@ export default function Navbar() {
         <div className="relative flex h-16 items-center justify-center">
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:gap-1">
-            {navLinks.map((link) => {
+            {finalNavLinks.map((link) => {
               const sectionId = link.isHash ? link.href.substring(1) : "";
               const isActive = link.isHash && activeSection === sectionId;
               
-              // Use Next.js Link for non-hash links that navigate to other pages
+              // Use handleNavClick for /#section links (navigation from other pages to home sections)
+              // This ensures proper scrolling behavior
+              if (!link.isHash && link.href.startsWith("/#")) {
+                return (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href, link.isHash)}
+                    className={cn(
+                      "relative px-4 py-2 text-sm font-medium transition-colors rounded-md",
+                      "text-muted-foreground hover:text-foreground hover:bg-accent"
+                    )}
+                  >
+                    {link.label}
+                  </a>
+                );
+              }
+              
+              // Use Next.js Link for other non-hash links that navigate to other pages
               if (!link.isHash && link.href.startsWith("/")) {
                 return (
                   <Link
@@ -195,11 +223,32 @@ export default function Navbar() {
                 <div className="mb-4 px-4">
                   <SheetTitle className="text-lg font-semibold">Navigation</SheetTitle>
                 </div>
-                {navLinks.map((link) => {
+                {finalNavLinks.map((link) => {
                   const sectionId = link.isHash ? link.href.substring(1) : "";
                   const isActive = link.isHash && activeSection === sectionId;
                   
-                  // Use Next.js Link for non-hash links that navigate to other pages
+                  // Use handleNavClick for /#section links (navigation from other pages to home sections)
+                  if (!link.isHash && link.href.startsWith("/#")) {
+                    const linkContent = (
+                      <a
+                        href={link.href}
+                        onClick={(e) => handleNavClick(e, link.href, link.isHash)}
+                        className={cn(
+                          "block px-4 py-3 text-base font-medium transition-colors rounded-md",
+                          "text-muted-foreground hover:text-foreground hover:bg-accent"
+                        )}
+                      >
+                        {link.label}
+                      </a>
+                    );
+                    return (
+                      <SheetClose key={link.href} asChild>
+                        {linkContent}
+                      </SheetClose>
+                    );
+                  }
+                  
+                  // Use Next.js Link for other non-hash links that navigate to other pages
                   if (!link.isHash && link.href.startsWith("/")) {
                     const linkContent = (
                       <Link

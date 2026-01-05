@@ -245,3 +245,90 @@ body::-webkit-scrollbar-thumb {
 .animate-gradient-shift-text {
   animation: gradientShiftText 3s ease infinite;
 }
+
+/* Prose styles for blog content */
+.prose {
+  @apply text-foreground;
+}
+
+.prose h1 {
+  @apply text-4xl font-bold tracking-tight mt-8 mb-4;
+}
+
+.prose h2 {
+  @apply text-3xl font-bold tracking-tight mt-6 mb-3;
+}
+
+.prose h3 {
+  @apply text-2xl font-semibold tracking-tight mt-5 mb-2;
+}
+
+.prose h4 {
+  @apply text-xl font-semibold mt-4 mb-2;
+}
+
+.prose p {
+  @apply mb-4 leading-7;
+}
+
+.prose a {
+  @apply text-primary no-underline hover:underline;
+}
+
+.prose strong {
+  @apply font-semibold;
+}
+
+.prose code {
+  @apply text-primary bg-muted px-1 py-0.5 rounded text-sm font-mono;
+}
+
+.prose pre {
+  @apply bg-muted border border-border rounded-lg p-4 overflow-x-auto mb-4;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-l-primary pl-4 italic my-4 text-muted-foreground;
+}
+
+.prose ul,
+.prose ol {
+  @apply mb-4 pl-6;
+}
+
+.prose ul {
+  @apply list-disc;
+}
+
+.prose ol {
+  @apply list-decimal;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose img {
+  @apply rounded-lg border border-border my-4;
+}
+
+.prose hr {
+  @apply border-border my-8;
+}
+
+.prose table {
+  @apply w-full border-collapse mb-4;
+}
+
+.prose th,
+.prose td {
+  @apply border border-border px-4 py-2;
+}
+
+.prose th {
+  @apply bg-muted font-semibold;
+}

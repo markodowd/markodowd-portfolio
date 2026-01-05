@@ -14,13 +14,14 @@ import { cn } from "@/lib/utils";
 import ThemeToggle from "@/components/theme/ThemeToggle";
 
 const navLinks = [
-  { href: "#hero", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#certificates", label: "Certificates" },
-  { href: "#hobbies", label: "Hobbies" },
-  { href: "#contact", label: "Contact" },
+  { href: "#hero", label: "Home", isHash: true },
+  { href: "#about", label: "About", isHash: true },
+  { href: "#projects", label: "Projects", isHash: true },
+  { href: "#skills", label: "Skills", isHash: true },
+  { href: "#certificates", label: "Certificates", isHash: true },
+  { href: "#hobbies", label: "Hobbies", isHash: true },
+  { href: "/blog", label: "Blog", isHash: false },
+  { href: "#contact", label: "Contact", isHash: true },
 ];
 
 export default function Navbar() {
@@ -63,17 +64,19 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const targetId = href.substring(1);
-    const element = document.getElementById(targetId);
-    
-    if (element) {
-      const offsetTop = element.offsetTop - 80; // Account for navbar height
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, isHash: boolean) => {
+    if (isHash) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+      const element = document.getElementById(targetId);
+      
+      if (element) {
+        const offsetTop = element.offsetTop - 80; // Account for navbar height
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth",
+        });
+      }
     }
     
     setIsMobileMenuOpen(false);
@@ -93,14 +96,14 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:gap-1">
             {navLinks.map((link) => {
-              const sectionId = link.href.substring(1);
-              const isActive = activeSection === sectionId;
+              const sectionId = link.isHash ? link.href.substring(1) : "";
+              const isActive = link.isHash && activeSection === sectionId;
               
               return (
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
+                  onClick={(e) => handleNavClick(e, link.href, link.isHash)}
                   className={cn(
                     "relative px-4 py-2 text-sm font-medium transition-colors rounded-md",
                     isActive
@@ -138,24 +141,30 @@ export default function Navbar() {
                   <SheetTitle className="text-lg font-semibold">Navigation</SheetTitle>
                 </div>
                 {navLinks.map((link) => {
-                  const sectionId = link.href.substring(1);
-                  const isActive = activeSection === sectionId;
+                  const sectionId = link.isHash ? link.href.substring(1) : "";
+                  const isActive = link.isHash && activeSection === sectionId;
                   
-                  return (
+                  const linkContent = (
+                    <a
+                      href={link.href}
+                      onClick={(e) => handleNavClick(e, link.href, link.isHash)}
+                      className={cn(
+                        "block px-4 py-3 text-base font-medium transition-colors rounded-md",
+                        isActive
+                          ? "text-primary bg-accent"
+                          : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                      )}
+                    >
+                      {link.label}
+                    </a>
+                  );
+                  
+                  return link.isHash ? (
                     <SheetClose key={link.href} asChild>
-                      <a
-                        href={link.href}
-                        onClick={(e) => handleNavClick(e, link.href)}
-                        className={cn(
-                          "block px-4 py-3 text-base font-medium transition-colors rounded-md",
-                          isActive
-                            ? "text-primary bg-accent"
-                            : "text-muted-foreground hover:text-foreground hover:bg-accent"
-                        )}
-                      >
-                        {link.label}
-                      </a>
+                      {linkContent}
                     </SheetClose>
+                  ) : (
+                    <div key={link.href}>{linkContent}</div>
                   );
                 })}
               </div>

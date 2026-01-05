@@ -15,14 +15,21 @@ import {
 import { cn } from "@/lib/utils";
 import ThemeToggle from "@/components/theme/ThemeToggle";
 
-const baseNavLinks = [
+type NavLink = {
+  href: string;
+  label: string;
+  isHash: boolean;
+  isHome?: boolean;
+};
+
+const baseNavLinks: NavLink[] = [
   { href: "/", label: "Home", isHash: false, isHome: true },
-  { href: "#about", label: "About", isHash: true },
-  { href: "#projects", label: "Projects", isHash: true },
-  { href: "#skills", label: "Skills", isHash: true },
-  { href: "#certificates", label: "Certificates", isHash: true },
-  { href: "#hobbies", label: "Hobbies", isHash: true },
-  { href: "#contact", label: "Contact", isHash: true },
+  { href: "#about", label: "About", isHash: true, isHome: false },
+  { href: "#projects", label: "Projects", isHash: true, isHome: false },
+  { href: "#skills", label: "Skills", isHash: true, isHome: false },
+  { href: "#certificates", label: "Certificates", isHash: true, isHome: false },
+  { href: "#hobbies", label: "Hobbies", isHash: true, isHome: false },
+  { href: "#contact", label: "Contact", isHash: true, isHome: false },
 ];
 
 export default function Navbar() {
@@ -33,7 +40,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Convert all nav links to point to home page sections when not on home page
-  const navLinks = baseNavLinks.map((link) => {
+  const navLinks: NavLink[] = baseNavLinks.map((link) => {
     // Home link always stays as "/"
     if (link.isHome) {
       return link;
@@ -43,16 +50,16 @@ export default function Navbar() {
       return link; // Keep hash links on home page
     } else {
       // Convert to /#section format when on other pages
-      return { ...link, href: `/${link.href}`, isHash: false };
+      return { ...link, href: `/${link.href}`, isHash: false, isHome: false };
     }
   });
   
   // Insert Blog link in the right position
-  const blogLink = isHomePage
-    ? { href: "#blog", label: "Blog", isHash: true }
-    : { href: "/#blog", label: "Blog", isHash: false };
+  const blogLink: NavLink = isHomePage
+    ? { href: "#blog", label: "Blog", isHash: true, isHome: false }
+    : { href: "/#blog", label: "Blog", isHash: false, isHome: false };
   
-  const finalNavLinks = [
+  const finalNavLinks: NavLink[] = [
     ...navLinks.slice(0, 6),
     blogLink,
     ...navLinks.slice(6),

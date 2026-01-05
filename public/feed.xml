@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Mark O'Dowd | Blog & Articles]]></title>
+        <description><![CDATA[Technical writing, tutorials, and thought pieces on web development, cloud architecture, and software engineering.]]></description>
+        <link>https://yourdomain.com</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Mon, 05 Jan 2026 17:40:30 GMT</lastBuildDate>
+        <atom:link href="https://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Mon, 05 Jan 2026 17:40:30 GMT</pubDate>
+        <copyright><![CDATA[All rights reserved 2026, Mark O'Dowd]]></copyright>
+        <language><![CDATA[en]]></language>
+        <item>
+            <title><![CDATA[The Pragmatic Programmer: A Book Review]]></title>
+            <description><![CDATA[Why The Pragmatic Programmer remains the single best book about programming in general, and how its core message about taking pride in your work transforms the way we approach software development.]]></description>
+            <link>https://yourdomain.com/blog/the-pragmatic-programmer-review</link>
+            <guid isPermaLink="true">https://yourdomain.com/blog/the-pragmatic-programmer-review</guid>
+            <category><![CDATA[Books]]></category>
+            <category><![CDATA[Books]]></category>
+            <category><![CDATA[Programming]]></category>
+            <category><![CDATA[Software Engineering]]></category>
+            <category><![CDATA[Career Development]]></category>
+            <category><![CDATA[Best Practices]]></category>
+            <dc:creator><![CDATA[Mark O'Dowd]]></dc:creator>
+            <pubDate>Sun, 05 Jan 2025 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

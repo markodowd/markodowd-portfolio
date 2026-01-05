@@ -5,7 +5,10 @@ import path from "path";
 
 export async function generateRSSFeed() {
   const posts = await getAllPosts();
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://yourdomain.com";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  if (!siteUrl) {
+    throw new Error("NEXT_PUBLIC_SITE_URL environment variable is required");
+  }
 
   const feed = new RSS({
     title: "Mark O'Dowd | Blog & Articles",

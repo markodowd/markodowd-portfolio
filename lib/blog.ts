@@ -14,7 +14,6 @@ export interface BlogPost {
   author: string;
   tags: string[];
   category: string;
-  readTime: number;
   featured?: boolean;
   content: string;
   contentHtml?: string;
@@ -51,7 +50,6 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     author: data.author || "Mark O'Dowd",
     tags: data.tags || [],
     category: data.category || "General",
-    readTime: data.readTime || 5,
     featured: data.featured || false,
     content,
     contentHtml,

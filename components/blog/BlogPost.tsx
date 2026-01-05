@@ -1,6 +1,6 @@
 "use client";
 
-import { Calendar, Clock, Tag } from "lucide-react";
+import { Calendar, Tag } from "lucide-react";
 import { format } from "date-fns";
 import { Badge } from "@/components/ui/badge";
 import { BlogPost as BlogPostType } from "@/lib/blog";
@@ -17,10 +17,6 @@ export function BlogPost({ post }: BlogPostProps) {
           <div className="flex items-center gap-1">
             <Calendar className="h-4 w-4" />
             <span>{format(new Date(post.date), "MMMM d, yyyy")}</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <Clock className="h-4 w-4" />
-            <span>{post.readTime} min read</span>
           </div>
           <span>By {post.author}</span>
         </div>

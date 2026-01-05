@@ -5,7 +5,6 @@ date: "2024-12-15"
 author: "Mark O'Dowd"
 tags: ["Next.js", "React", "Tutorial", "Web Development"]
 category: "Tutorial"
-readTime: 8
 featured: true
 ---
 

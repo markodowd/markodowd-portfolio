@@ -5,7 +5,6 @@ date: "2024-10-10"
 author: "Mark O'Dowd"
 tags: ["Accessibility", "Web Development", "WCAG", "ARIA", "UX"]
 category: "Web Development"
-readTime: 12
 featured: true
 ---
 

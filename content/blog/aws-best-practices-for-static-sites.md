@@ -5,7 +5,6 @@ date: "2024-11-20"
 author: "Mark O'Dowd"
 tags: ["AWS", "DevOps", "Cloud Architecture", "S3", "CloudFront"]
 category: "Cloud Architecture"
-readTime: 10
 featured: true
 ---
 

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Calendar, Clock, Tag } from "lucide-react";
+import { Calendar, Tag } from "lucide-react";
 import { format } from "date-fns";
 import ScrollAnimation from "@/components/shared/ScrollAnimation";
 import { Badge } from "@/components/ui/badge";
@@ -24,10 +24,6 @@ export function BlogCard({ post, index }: BlogCardProps) {
             <div className="flex items-center gap-1">
               <Calendar className="h-4 w-4" />
               <span>{format(new Date(post.date), "MMM d, yyyy")}</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="h-4 w-4" />
-              <span>{post.readTime} min read</span>
             </div>
           </div>
 

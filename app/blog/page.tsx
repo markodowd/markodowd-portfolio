@@ -1,7 +1,5 @@
 import { getAllPosts } from "@/lib/blog";
-import { BlogCard } from "@/components/blog/BlogCard";
 import { BlogHeader } from "@/components/blog/BlogHeader";
-import { SectionBackground } from "@/components/shared/SectionBackground";
 import { BlogClient } from "./BlogClient";
 import { createMetadata } from "@/lib/metadata";
 

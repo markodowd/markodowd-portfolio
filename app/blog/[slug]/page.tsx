@@ -1,4 +1,4 @@
-import { getPostSlugs, getPostBySlug, getAllPosts } from "@/lib/blog";
+import { getPostSlugs, getPostBySlug, getRelatedPosts } from "@/lib/blog";
 import { BlogPost } from "@/components/blog/BlogPost";
 import { BlogCard } from "@/components/blog/BlogCard";
 import { notFound } from "next/navigation";
@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { ArticleStructuredData } from "@/components/shared/StructuredData";
-import { siteConfig } from "@/lib/metadata";
+import { siteConfig, createBlogPostMetadata } from "@/lib/metadata";
 
 export async function generateStaticParams() {
   const slugs = getPostSlugs();
@@ -29,24 +29,7 @@ export async function generateMetadata({
     };
   }
 
-  const { createMetadata, siteConfig } = await import("@/lib/metadata");
-  
-  // Format dates for Open Graph
-  const publishedTime = post.date ? new Date(post.date).toISOString() : undefined;
-  
-  // Create article-specific image URL (you can customize this per post later)
-  const articleImage = `${siteConfig.url}/og-image.webp`; // Default, can be customized per post
-
-  return createMetadata({
-    title: post.title,
-    description: post.description,
-    path: `/blog/${slug}`,
-    type: "article",
-    image: articleImage,
-    publishedTime,
-    authors: [post.author],
-    tags: post.tags,
-  });
+  return createBlogPostMetadata(post);
 }
 
 export default async function BlogPostPage({
@@ -61,17 +44,7 @@ export default async function BlogPostPage({
     notFound();
   }
 
-  // Get related posts (same tags or category)
-  const allPosts = await getAllPosts();
-  const relatedPosts = allPosts
-    .filter(
-      (p) =>
-        p.slug !== post.slug &&
-        (p.category === post.category ||
-          p.tags.some((tag) => post.tags.includes(tag)))
-    )
-    .slice(0, 3);
-
+  const relatedPosts = await getRelatedPosts(post, 3);
   const postUrl = `${siteConfig.url}/blog/${post.slug}`;
 
   return (

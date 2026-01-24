@@ -107,4 +107,19 @@ export async function getPostsByCategory(category: string): Promise<BlogPost[]> 
   return allPosts.filter((post) => post.category === category);
 }
 
+export async function getRelatedPosts(
+  currentPost: BlogPost,
+  limit: number = 3
+): Promise<BlogPost[]> {
+  const allPosts = await getAllPosts();
+  return allPosts
+    .filter(
+      (p) =>
+        p.slug !== currentPost.slug &&
+        (p.category === currentPost.category ||
+          p.tags.some((tag) => currentPost.tags.includes(tag)))
+    )
+    .slice(0, limit);
+}
+
 

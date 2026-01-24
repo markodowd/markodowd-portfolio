@@ -137,3 +137,29 @@ export function createMetadata({
 
   return metadata;
 }
+
+/**
+ * Creates metadata for a blog post page
+ */
+export async function createBlogPostMetadata(post: {
+  slug: string;
+  title: string;
+  description: string;
+  date?: string;
+  author: string;
+  tags: string[];
+}): Promise<Metadata> {
+  const publishedTime = post.date ? new Date(post.date).toISOString() : undefined;
+  const articleImage = `${siteConfig.url}/og-image.webp`;
+
+  return createMetadata({
+    title: post.title,
+    description: post.description,
+    path: `/blog/${post.slug}`,
+    type: "article",
+    image: articleImage,
+    publishedTime,
+    authors: [post.author],
+    tags: post.tags,
+  });
+}

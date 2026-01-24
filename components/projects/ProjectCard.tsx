@@ -42,7 +42,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <div className="mb-4 relative w-full aspect-video rounded-lg overflow-hidden">
             <Image
               src={project.image}
-              alt={project.title}
+              alt={`Screenshot of ${project.title} project showcasing ${project.technologies.join(", ")}`}
               fill
               className="object-cover"
             />

@@ -30,6 +30,14 @@ const projects: Project[] = [
     liveUrl: "https://www.irishtrad.ie",
     image: "/images/projects/irishtrad.webp",
   },
+  {
+    title: "Mark O'Dowd Portfolio",
+    description:
+      "An open-source personal showcase built with Next.js and Tailwind CSS. This project features a fully automated CI/CD pipeline powered by GitHub Actions, which handles automated builds and deployments directly to AWS. It serves as a live demonstration of my ability to maintain professional-grade development workflows.",
+    technologies: ["Next", "React", "TypeScript", "Tailwind CSS", "GitHub Actions", "AWS"],
+    liveUrl: "https://github.com/markodowd/markodowd-portfolio",
+    image: "/images/projects/portfolio.webp",
+  },
 ];
 
 export default function Projects() {

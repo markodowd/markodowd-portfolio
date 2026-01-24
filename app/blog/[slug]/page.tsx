@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { ArticleStructuredData } from "@/components/shared/StructuredData";
+import { siteConfig } from "@/lib/metadata";
 
 export async function generateStaticParams() {
   const slugs = getPostSlugs();
@@ -27,10 +29,24 @@ export async function generateMetadata({
     };
   }
 
-  return {
-    title: `${post.title} | Mark O'Dowd`,
+  const { createMetadata, siteConfig } = await import("@/lib/metadata");
+  
+  // Format dates for Open Graph
+  const publishedTime = post.date ? new Date(post.date).toISOString() : undefined;
+  
+  // Create article-specific image URL (you can customize this per post later)
+  const articleImage = `${siteConfig.url}/og-image.webp`; // Default, can be customized per post
+
+  return createMetadata({
+    title: post.title,
     description: post.description,
-  };
+    path: `/blog/${slug}`,
+    type: "article",
+    image: articleImage,
+    publishedTime,
+    authors: [post.author],
+    tags: post.tags,
+  });
 }
 
 export default async function BlogPostPage({
@@ -56,8 +72,18 @@ export default async function BlogPostPage({
     )
     .slice(0, 3);
 
+  const postUrl = `${siteConfig.url}/blog/${post.slug}`;
+
   return (
     <main className="min-h-screen">
+      <ArticleStructuredData
+        title={post.title}
+        description={post.description}
+        url={postUrl}
+        datePublished={post.date}
+        author={post.author}
+        tags={post.tags}
+      />
       <section className="relative bg-gradient-to-br from-muted/50 via-muted/40 to-primary/10 px-4 py-20 sm:px-6 lg:px-8 overflow-hidden">
         <div className="relative mx-auto max-w-6xl z-10">
           <div className="mb-8">

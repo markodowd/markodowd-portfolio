@@ -6,6 +6,7 @@ import { HeroBackground } from "./HeroBackground";
 import { HeroActions } from "./HeroActions";
 import { SocialIcons } from "./SocialIcons";
 import { ScrollIndicator } from "./ScrollIndicator";
+import { siteConfig } from "@/lib/metadata";
 
 export default function Hero() {
   const { mousePosition, ref } = useMousePosition();
@@ -61,7 +62,7 @@ export default function Hero() {
           >
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-foreground via-primary via-50% to-foreground/70 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift-text">
-                Mark O'Dowd
+                {siteConfig.author.name}
               </span>
               {/* Animated underline */}
               <motion.span
@@ -105,11 +106,11 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <span>Full-stack Developer</span>
+            <span>{siteConfig.credentials.jobTitle}</span>
             <span className="text-muted-foreground/50">•</span>
-            <span>AWS Certified</span>
+            <span>{siteConfig.credentials.awsCertified}</span>
             <span className="text-muted-foreground/50">•</span>
-            <span>Based in Ireland</span>
+            <span>{siteConfig.credentials.location}</span>
           </motion.div>
 
           {/* Enhanced description with better animation */}

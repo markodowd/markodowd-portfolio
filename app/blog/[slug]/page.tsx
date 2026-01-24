@@ -1,10 +1,12 @@
-import { getPostSlugs, getPostBySlug, getAllPosts } from "@/lib/blog";
+import { getPostSlugs, getPostBySlug, getRelatedPosts } from "@/lib/blog";
 import { BlogPost } from "@/components/blog/BlogPost";
 import { BlogCard } from "@/components/blog/BlogCard";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { ArticleStructuredData } from "@/components/shared/StructuredData";
+import { siteConfig, createBlogPostMetadata } from "@/lib/metadata";
 
 export async function generateStaticParams() {
   const slugs = getPostSlugs();
@@ -27,10 +29,7 @@ export async function generateMetadata({
     };
   }
 
-  return {
-    title: `${post.title} | Mark O'Dowd`,
-    description: post.description,
-  };
+  return createBlogPostMetadata(post);
 }
 
 export default async function BlogPostPage({
@@ -45,19 +44,19 @@ export default async function BlogPostPage({
     notFound();
   }
 
-  // Get related posts (same tags or category)
-  const allPosts = await getAllPosts();
-  const relatedPosts = allPosts
-    .filter(
-      (p) =>
-        p.slug !== post.slug &&
-        (p.category === post.category ||
-          p.tags.some((tag) => post.tags.includes(tag)))
-    )
-    .slice(0, 3);
+  const relatedPosts = await getRelatedPosts(post, 3);
+  const postUrl = `${siteConfig.url}/blog/${post.slug}`;
 
   return (
     <main className="min-h-screen">
+      <ArticleStructuredData
+        title={post.title}
+        description={post.description}
+        url={postUrl}
+        datePublished={post.date}
+        author={post.author}
+        tags={post.tags}
+      />
       <section className="relative bg-gradient-to-br from-muted/50 via-muted/40 to-primary/10 px-4 py-20 sm:px-6 lg:px-8 overflow-hidden">
         <div className="relative mx-auto max-w-6xl z-10">
           <div className="mb-8">

@@ -1,13 +1,21 @@
 import { getAllPosts } from "@/lib/blog";
-import { BlogCard } from "@/components/blog/BlogCard";
 import { BlogHeader } from "@/components/blog/BlogHeader";
-import { SectionBackground } from "@/components/shared/SectionBackground";
 import { BlogClient } from "./BlogClient";
+import { createMetadata, siteConfig } from "@/lib/metadata";
 
-export const metadata = {
-  title: "Blog & Articles | Mark O'Dowd",
-  description: "Technical writing, tutorials, and thought pieces on web development, cloud architecture, and software engineering.",
-};
+export const metadata = createMetadata({
+  title: siteConfig.blogTitle,
+  description:
+    "Technical writing, tutorials, and thought pieces on web development, cloud architecture, and software engineering.",
+  path: "/blog",
+  tags: [
+    "web development",
+    "cloud architecture",
+    "software engineering",
+    "tutorials",
+    "technical writing",
+  ],
+});
 
 export default async function BlogPage() {
   const posts = await getAllPosts();

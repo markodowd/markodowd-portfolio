@@ -8,6 +8,13 @@ import Blog from "@/components/blog/Blog";
 import Contact from "@/components/contact/Contact";
 import Footer from "@/components/footer/Footer";
 import { getFeaturedPosts } from "@/lib/blog";
+import { createMetadata, siteConfig } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: siteConfig.title,
+  description: siteConfig.description,
+  path: "/",
+});
 
 export default async function Home() {
   const featuredPosts = await getFeaturedPosts();

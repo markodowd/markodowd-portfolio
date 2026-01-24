@@ -2,23 +2,21 @@ import RSS from "rss";
 import { getAllPosts, BlogPost } from "./blog";
 import fs from "fs";
 import path from "path";
+import { siteConfig, getSiteUrl } from "./metadata";
 
 export async function generateRSSFeed() {
   const posts = await getAllPosts();
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  if (!siteUrl) {
-    throw new Error("NEXT_PUBLIC_SITE_URL environment variable is required");
-  }
+  const siteUrl = getSiteUrl();
 
   const feed = new RSS({
-    title: "Mark O'Dowd | Blog & Articles",
+    title: siteConfig.blogTitleFull,
     description:
       "Technical writing, tutorials, and thought pieces on web development, cloud architecture, and software engineering.",
     site_url: siteUrl,
     feed_url: `${siteUrl}/feed.xml`,
     language: "en",
     pubDate: new Date(),
-    copyright: `All rights reserved ${new Date().getFullYear()}, Mark O'Dowd`,
+    copyright: `All rights reserved ${new Date().getFullYear()}, ${siteConfig.author.name}`,
   });
 
   posts.forEach((post: BlogPost) => {

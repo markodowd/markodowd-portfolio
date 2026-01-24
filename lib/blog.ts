@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import { siteConfig } from "./metadata";
 
 const postsDirectory = path.join(process.cwd(), "content", "blog");
 
@@ -47,7 +48,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     title: data.title || "",
     description: data.description || "",
     date: data.date || "",
-    author: data.author || "Mark O'Dowd",
+    author: data.author || siteConfig.author.name,
     tags: data.tags || [],
     category: data.category || "General",
     featured: data.featured || false,

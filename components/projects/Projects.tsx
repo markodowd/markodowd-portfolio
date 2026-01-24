@@ -4,6 +4,7 @@ import { useMousePosition } from "@/hooks/use-mouse-position";
 import { SectionBackground } from "@/components/shared/SectionBackground";
 import { ProjectsHeader } from "./ProjectsHeader";
 import { ProjectCard } from "./ProjectCard";
+import { siteConfig } from "@/lib/metadata";
 
 interface Project {
   title: string;
@@ -31,7 +32,7 @@ const projects: Project[] = [
     image: "/images/projects/irishtrad.webp",
   },
   {
-    title: "Mark O'Dowd Portfolio",
+    title: siteConfig.portfolioTitle,
     description:
       "An open-source personal showcase built with Next.js and Tailwind CSS. This project features a fully automated CI/CD pipeline powered by GitHub Actions, which handles automated builds and deployments directly to AWS. It serves as a live demonstration of my ability to maintain professional-grade development workflows.",
     technologies: ["Next", "React", "TypeScript", "Tailwind CSS", "GitHub Actions", "AWS"],

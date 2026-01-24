@@ -1,10 +1,10 @@
 import { getAllPosts } from "@/lib/blog";
 import { BlogHeader } from "@/components/blog/BlogHeader";
 import { BlogClient } from "./BlogClient";
-import { createMetadata } from "@/lib/metadata";
+import { createMetadata, siteConfig } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Blog & Articles",
+  title: siteConfig.blogTitle,
   description:
     "Technical writing, tutorials, and thought pieces on web development, cloud architecture, and software engineering.",
   path: "/blog",

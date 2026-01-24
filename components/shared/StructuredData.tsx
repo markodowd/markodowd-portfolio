@@ -11,7 +11,7 @@ export function PersonStructuredData({
     "@context": "https://schema.org",
     "@type": type,
     name: siteConfig.author.name,
-    jobTitle: "Full-stack Software Developer",
+    jobTitle: siteConfig.jobTitleFull,
     description: siteConfig.description,
     url: siteConfig.url,
     sameAs: [

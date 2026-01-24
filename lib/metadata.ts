@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-function getSiteUrl(): string {
+export function getSiteUrl(): string {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
   if (!siteUrl) {
     throw new Error("NEXT_PUBLIC_SITE_URL environment variable is required");
@@ -14,6 +14,18 @@ const defaultTitle = "Mark O'Dowd | Full-stack Developer | AWS Certified";
 const defaultDescription =
   "Full-stack software developer from Ireland specializing in modern web applications, cloud architecture, and AWS. Building fast, reliable, and maintainable solutions with Next.js, React, TypeScript, and AWS.";
 
+export const authorName = siteName;
+export const jobTitle = "Full-stack Developer";
+export const jobTitleFull = "Full-stack Software Developer";
+export const credentials = {
+  jobTitle: "Full-stack Developer",
+  awsCertified: "AWS Certified",
+  location: "Based in Ireland",
+};
+export const portfolioTitle = `${siteName} Portfolio`;
+export const blogTitle = "Blog & Articles";
+export const blogTitleFull = `${siteName} | ${blogTitle}`;
+
 export const siteConfig = {
   name: siteName,
   title: defaultTitle,
@@ -25,6 +37,12 @@ export const siteConfig = {
     name: "Mark O'Dowd",
     email: "contact@markodowd.dev",
   },
+  jobTitle,
+  jobTitleFull,
+  credentials,
+  portfolioTitle,
+  blogTitle,
+  blogTitleFull,
 };
 
 /**

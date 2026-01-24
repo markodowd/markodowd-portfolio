@@ -18,9 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = createMetadata({
-  title: "Mark O'Dowd | Full-stack Developer | AWS Certified",
-  description:
-    "Full-stack software developer from Ireland specializing in modern web applications, cloud architecture, and AWS. Building fast, reliable, and maintainable solutions with Next.js, React, TypeScript, and AWS.",
+  title: siteConfig.title,
+  description: siteConfig.description,
 });
 
 export default function RootLayout({

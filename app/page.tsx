@@ -8,7 +8,7 @@ import Blog from "@/components/blog/Blog";
 import Contact from "@/components/contact/Contact";
 import Footer from "@/components/footer/Footer";
 import { getFeaturedPosts } from "@/lib/blog";
-import { createMetadata } from "@/lib/metadata";
+import { createMetadata, siteConfig } from "@/lib/metadata";
 
 export const metadata = createMetadata({
   title: siteConfig.title,

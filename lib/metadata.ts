@@ -20,7 +20,7 @@ export const siteConfig = {
   description: defaultDescription,
   url: siteUrl,
   ogImage: `${siteUrl}/og-image.webp`,
-  xHandle: "@markodowd_dev", // X (formerly Twitter) handle
+  xHandle: "@markodowd_dev",
   author: {
     name: "Mark O'Dowd",
     email: "contact@markodowd.dev",

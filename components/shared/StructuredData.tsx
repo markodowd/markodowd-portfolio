@@ -15,10 +15,10 @@ export function PersonStructuredData({
     description: siteConfig.description,
     url: siteConfig.url,
     sameAs: [
-      // Add your social media profiles here
-      // "https://github.com/markodowd",
-      // "https://linkedin.com/in/markodowd",
-      // "https://x.com/markodowd", // X (formerly Twitter)
+      "https://github.com/markodowd",
+      "https://www.linkedin.com/in/markodowd2/",
+      "https://x.com/markodowd_dev",
+      "https://bsky.app/profile/markodowd.dev",
     ],
     knowsAbout: [
       "Web Development",
@@ -32,11 +32,11 @@ export function PersonStructuredData({
     ],
     alumniOf: {
       "@type": "Organization",
-      name: "University", // Update with your actual university
+      name: "Queen's University Belfast",
     },
     address: {
       "@type": "PostalAddress",
-      addressCountry: "IE", // Ireland
+      addressCountry: "IE",
     },
   };
 

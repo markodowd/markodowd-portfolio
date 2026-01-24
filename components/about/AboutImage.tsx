@@ -9,7 +9,7 @@ export function AboutImage() {
       <div className="relative w-full aspect-square rounded-lg overflow-hidden">
         <Image
           src="/images/user/me.webp"
-          alt="Mark"
+          alt="Mark O'Dowd, Full-stack Developer and AWS Certified professional"
           fill
           className="object-cover"
           priority

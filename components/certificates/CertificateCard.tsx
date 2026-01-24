@@ -49,7 +49,7 @@ export function CertificateCard({ certificate, index }: CertificateCardProps) {
           <div className="mb-3 w-full">
             <Image
               src={certificate.image}
-              alt={certificate.title}
+              alt={`${certificate.title} certificate from ${certificate.issuer}`}
               width={600}
               height={400}
               className="w-full h-auto rounded-lg object-cover"

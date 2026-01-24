@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run generate-rss && next build",
+    "build": "npm run generate-rss && npm run generate-sitemap && npm run generate-robots && next build",
     "start": "next start",
     "lint": "eslint",
-    "generate-rss": "tsx scripts/generate-rss.ts"
+    "generate-rss": "tsx scripts/generate-rss.ts",
+    "generate-sitemap": "tsx scripts/generate-sitemap.ts",
+    "generate-robots": "tsx scripts/generate-robots.ts"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",

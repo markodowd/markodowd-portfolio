@@ -32,7 +32,7 @@ export function HobbyCard({ hobby, index }: HobbyCardProps) {
         <div className="relative w-full h-64 rounded-lg overflow-hidden bg-muted/50">
           <Image
             src={hobby.image}
-            alt={hobby.name}
+            alt={`Image representing ${hobby.name} hobby interest`}
             fill
             className="object-cover"
           />

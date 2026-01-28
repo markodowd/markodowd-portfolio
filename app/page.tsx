@@ -26,8 +26,8 @@ export default async function Home() {
       <Projects />
       <Skills />
       <Certificates />
-      <Hobbies />
       <Blog posts={featuredPosts} />
+      <Hobbies />
       <Contact />
       <Footer />
     </main>

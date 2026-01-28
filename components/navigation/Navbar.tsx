@@ -60,9 +60,9 @@ export default function Navbar() {
     : { href: "/#blog", label: "Blog", isHash: false, isHome: false };
   
   const finalNavLinks: NavLink[] = [
-    ...navLinks.slice(0, 6),
+    ...navLinks.slice(0, 5),
     blogLink,
-    ...navLinks.slice(6),
+    ...navLinks.slice(5),
   ];
 
   useEffect(() => {
@@ -72,7 +72,7 @@ export default function Navbar() {
       setIsScrolled(window.scrollY > 20);
 
       // Update active section based on scroll position
-      const sections = ["hero", "about", "projects", "skills", "certificates", "hobbies", "blog", "contact"];
+      const sections = ["hero", "about", "projects", "skills", "certificates", "blog", "hobbies", "contact"];
       const scrollPosition = window.scrollY + 150; // Offset for navbar + some padding
 
       // Check if we're at the top (hero section)

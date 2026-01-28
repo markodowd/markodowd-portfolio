@@ -32,6 +32,14 @@ const projects: Project[] = [
     image: "/images/projects/irishtrad.webp",
   },
   {
+    title: "Repair Rehab",
+    description:
+      "One of the leading device repair shops in N.Ireland (covering the UK & Ireland) was looking to increase their online presence. A landing page was created to improve SEO and provide a more professional look and feel. In addition, a custom management system is being developed to allow the client to easily manage orders and customer information.",
+    technologies: ["Next", "React", "TypeScript", "Express", "Node", "AWS"],
+    liveUrl: "https://www.repair-rehab.com/",
+    image: "/images/projects/repairrehab.webp",
+  },
+  {
     title: siteConfig.portfolioTitle,
     description:
       "An open-source personal showcase built with Next.js and Tailwind CSS. This project features a fully automated CI/CD pipeline powered by GitHub Actions, which handles automated builds and deployments directly to AWS. It serves as a live demonstration of my ability to maintain professional-grade development workflows.",

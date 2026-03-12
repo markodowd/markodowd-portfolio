@@ -25,10 +25,10 @@ export default function Hero() {
 
   const letterVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { duration: 0.3 }
+      transition: { duration: 0.3 },
     },
   };
 
@@ -39,25 +39,25 @@ export default function Hero() {
       className="relative flex min-h-screen flex-col items-center justify-center px-4 pt-24 pb-20 text-center overflow-hidden"
     >
       <HeroBackground mousePosition={mousePosition} />
-      
+
       {/* Enhanced glow effect behind content */}
       <div className="relative max-w-4xl space-y-8 z-10 before:absolute before:inset-0 before:rounded-3xl before:bg-primary/5 before:blur-3xl before:-z-10">
-        <motion.div 
+        <motion.div
           className="space-y-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.21, 1.11, 0.81, 0.99] }}
         >
           {/* Enhanced name with better typography */}
-          <motion.h1 
+          <motion.h1
             className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl"
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ 
-              duration: 0.8, 
+            transition={{
+              duration: 0.8,
               delay: 0.2,
               type: "spring",
-              stiffness: 100
+              stiffness: 100,
             }}
           >
             <span className="relative inline-block">
@@ -75,7 +75,7 @@ export default function Hero() {
           </motion.h1>
 
           {/* Enhanced subtitle with typing effect */}
-          <motion.h2 
+          <motion.h2
             className="text-3xl font-semibold text-muted-foreground sm:text-4xl md:text-5xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -114,19 +114,20 @@ export default function Hero() {
           </motion.div>
 
           {/* Enhanced description with better animation */}
-          <motion.p 
+          <motion.p
             className="mx-auto max-w-2xl text-lg text-muted-foreground/90 sm:text-xl leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            I build{" "}
+            I partner with startups and small to medium-sized enterprises (SMEs)
+            to build{" "}
             <span className="relative inline-block font-semibold text-foreground">
-              modern web applications
+              modern, scalable web applications
             </span>
-            {" "}with a focus on user experience,
-            performance, and clean code. Passionate about creating digital
-            solutions that make a difference.
+            . My focus is on delivering high-performance digital products that
+            bridge the gap between seamless user experience and clean,
+            maintainable code
           </motion.p>
         </motion.div>
 

@@ -1,7 +1,7 @@
 ---
 title: "The Agile Samurai: A Book Review"
 description: "Why The Agile Samurai's clear, practical approach makes it valuable not just for team leaders, but for developers at any level who want to understand and thrive in Agile environments."
-date: "2025-01-20"
+date: "2026-01-20"
 author: "Mark O'Dowd"
 tags: ["Books", "Agile", "Software Engineering", "Career Development", "Team Leadership", "Project Management"]
 category: "Books"

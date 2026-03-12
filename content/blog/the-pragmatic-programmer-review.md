@@ -1,7 +1,7 @@
 ---
 title: "The Pragmatic Programmer: A Book Review"
 description: "Why The Pragmatic Programmer remains the single best book about programming in general, and how its core message about taking pride in your work transforms the way we approach software development."
-date: "2025-01-05"
+date: "2026-01-05"
 author: "Mark O'Dowd"
 tags: ["Books", "Programming", "Software Engineering", "Career Development", "Best Practices"]
 category: "Books"

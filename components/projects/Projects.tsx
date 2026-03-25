@@ -40,12 +40,12 @@ const projects: Project[] = [
     image: "/images/projects/repairrehab.webp",
   },
   {
-    title: siteConfig.portfolioTitle,
+    title: "Jujitsu Ireland",
     description:
-      "An open-source personal showcase built with Next.js and Tailwind CSS. This project features a fully automated CI/CD pipeline powered by GitHub Actions, which handles automated builds and deployments directly to AWS. It serves as a live demonstration of my ability to maintain professional-grade development workflows.",
+      "Supplemental learning tool for practictioners of jujitsu under the World Jujitsu Federation (WJJF) Ireland. It is a high-performance static site (SSG) built with Next.js and Tailwind CSS. This project features a fully automated CI/CD pipeline powered by GitHub Actions handling automated build and deployments directly to AWS",
     technologies: ["Next", "React", "TypeScript", "Tailwind CSS", "GitHub Actions", "AWS"],
-    liveUrl: "https://github.com/markodowd/markodowd-portfolio",
-    image: "/images/projects/portfolio.webp",
+    liveUrl: "https://www.jujitsu.ie",
+    image: "/images/projects/jujitsu.webp",
   },
 ];
 

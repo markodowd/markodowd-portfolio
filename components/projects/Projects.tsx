@@ -40,7 +40,7 @@ const projects: Project[] = [
     image: "/images/projects/repairrehab.webp",
   },
   {
-    title: "Jujitsu Ireland",
+    title: "Mushin Jujitsu Trainer",
     description:
       "Supplemental learning tool for practictioners of jujitsu under the World Jujitsu Federation (WJJF) Ireland. It is a high-performance static site (SSG) built with Next.js and Tailwind CSS. This project features a fully automated CI/CD pipeline powered by GitHub Actions handling automated build and deployments directly to AWS",
     technologies: ["Next", "React", "TypeScript", "Tailwind CSS", "GitHub Actions", "AWS"],

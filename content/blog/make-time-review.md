@@ -1,6 +1,6 @@
 ---
 title: "Make Time: A Book Review"
-description: "Why *Make Time* is one of my favourite books lately, and the specific tactics that instantly made it feel practical: a wristwatch and a distraction-free phone."
+description: "Why Make Time is one of my favourite books lately, and the specific tactics that instantly made it feel practical: a wristwatch and a distraction-free phone."
 date: "2026-03-30"
 author: "Mark O'Dowd"
 tags: ["Books", "Productivity", "Time Management", "Mindset", "Habits"]

@@ -6,6 +6,7 @@ author: "Mark O'Dowd"
 tags: ["Books", "Agile", "Kanban", "Software Engineering", "Project Management", "Lean"]
 category: "Books"
 featured: false
+image: "/images/blogs/lean_from_the_trenches.webp"
 ---
 
 When people talk about Agile, most of the examples are abstract: story cards, sticky notes, and hand‑wavy promises about "flow" and "continuous improvement." **Lean from the Trenches** by Henrik Kniberg is different in that it anchors everything in a very real, very specific project. You’re not reading theory; you’re looking over the shoulder of a team trying to deliver a large‑scale project using Kanban, with all the constraints, compromises, and messy realities that come with it.

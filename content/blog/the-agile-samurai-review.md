@@ -6,6 +6,7 @@ author: "Mark O'Dowd"
 tags: ["Books", "Agile", "Software Engineering", "Career Development", "Team Leadership", "Project Management"]
 category: "Books"
 featured: true
+image: "/images/blogs/agile_samurai.webp"
 ---
 
 Agile gets talked about a lot, but it’s not always talked about clearly. **The Agile Samurai** by Jonathan Rasmusson is one of those rare books that actually makes Agile feel simple, practical, and usable. It’s written with team leaders in mind, but it’s just as useful if you’re a developer trying to understand how Agile really works day to day. What stood out to me most is that it gives you a solid mental model for Agile, not just a list of ceremonies or buzzwords to memorize.

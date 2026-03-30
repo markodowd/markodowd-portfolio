@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Calendar, Tag } from "lucide-react";
 import { format } from "date-fns";
 import ScrollAnimation from "@/components/shared/ScrollAnimation";
@@ -25,6 +26,15 @@ export function BlogCard({ post, index }: BlogCardProps) {
               <Calendar className="h-4 w-4" />
               <span>{format(new Date(post.date), "MMM d, yyyy")}</span>
             </div>
+          </div>
+
+          <div className="relative mb-4 h-48 w-full overflow-hidden rounded-md">
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              className="object-contain"
+            />
           </div>
 
           <h3 className="mb-2 text-2xl font-semibold group-hover:text-primary transition-colors">

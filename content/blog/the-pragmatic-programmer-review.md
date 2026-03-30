@@ -6,6 +6,7 @@ author: "Mark O'Dowd"
 tags: ["Books", "Programming", "Software Engineering", "Career Development", "Best Practices"]
 category: "Books"
 featured: true
+image: "/images/blogs/pragmatic_programmer.webp"
 ---
 
 In a landscape flooded with programming books covering every conceivable language, framework, and technology, finding truly timeless wisdom is rare. Yet among this vast library, there exists one book that stands apart: **The Pragmatic Programmer** by Andy Hunt and Dave Thomas. After years of reading technical books, I can confidently say this is the single best book about programming in general, not because it teaches you a specific language or tool, but because it teaches you how to think like a professional programmer.

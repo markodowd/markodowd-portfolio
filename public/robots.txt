@@ -1,10 +1,10 @@
-# robots.txt for markodowd.dev
+# robots.txt for www.markodowd.dev/
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://markodowd.dev/sitemap.xml
+Sitemap: https://www.markodowd.dev//sitemap.xml
 
 # Disallow specific paths if needed in the future
 # Disallow: /admin/

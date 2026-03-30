@@ -7,9 +7,9 @@
     "build": "npm run generate-rss && npm run generate-sitemap && npm run generate-robots && next build",
     "start": "next start",
     "lint": "eslint",
-    "generate-rss": "tsx scripts/generate-rss.ts",
-    "generate-sitemap": "tsx scripts/generate-sitemap.ts",
-    "generate-robots": "tsx scripts/generate-robots.ts"
+    "generate-rss": "tsx --env-file=.env scripts/generate-rss.ts",
+    "generate-sitemap": "tsx --env-file=.env scripts/generate-sitemap.ts",
+    "generate-robots": "tsx --env-file=.env scripts/generate-robots.ts"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",

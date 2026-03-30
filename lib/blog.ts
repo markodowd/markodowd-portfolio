@@ -16,6 +16,7 @@ export interface BlogPost {
   tags: string[];
   category: string;
   featured?: boolean;
+  image: string;
   content: string;
   contentHtml?: string;
 }
@@ -52,6 +53,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     tags: data.tags || [],
     category: data.category || "General",
     featured: data.featured || false,
+    image: data.image || "",
     content,
     contentHtml,
   };

@@ -2,18 +2,76 @@
     <channel>
         <title><![CDATA[Mark O'Dowd | Blog & Articles]]></title>
         <description><![CDATA[Technical writing, tutorials, and thought pieces on web development, cloud architecture, and software engineering.]]></description>
-        <link>https://yourdomain.com</link>
+        <link>https://www.markodowd.dev/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 05 Jan 2026 17:40:30 GMT</lastBuildDate>
-        <atom:link href="https://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 05 Jan 2026 17:40:30 GMT</pubDate>
+        <lastBuildDate>Mon, 30 Mar 2026 14:48:08 GMT</lastBuildDate>
+        <atom:link href="https://www.markodowd.dev//feed.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Mon, 30 Mar 2026 14:48:08 GMT</pubDate>
         <copyright><![CDATA[All rights reserved 2026, Mark O'Dowd]]></copyright>
         <language><![CDATA[en]]></language>
         <item>
+            <title><![CDATA[Make Time: A Book Review]]></title>
+            <description><![CDATA[Why Make Time is one of my favourite books lately, and the specific tactics that instantly made it feel practical: a wristwatch and a distraction-free phone.]]></description>
+            <link>https://www.markodowd.dev//blog/make-time-review</link>
+            <guid isPermaLink="true">https://www.markodowd.dev//blog/make-time-review</guid>
+            <category><![CDATA[Books]]></category>
+            <category><![CDATA[Books]]></category>
+            <category><![CDATA[Productivity]]></category>
+            <category><![CDATA[Time Management]]></category>
+            <category><![CDATA[Mindset]]></category>
+            <category><![CDATA[Habits]]></category>
+            <dc:creator><![CDATA[Mark O'Dowd]]></dc:creator>
+            <pubDate>Mon, 30 Mar 2026 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[tmux 3: Productive Mouse-Free Development: A Book Review]]></title>
+            <description><![CDATA[How Brian P. Hogan's tmux 3 guide turned superficial familiarity into real productivity, with practical configs, workflows, and features that most casual tmux users never touch.]]></description>
+            <link>https://www.markodowd.dev//blog/tmux-3-productive-mouse-free-development-review</link>
+            <guid isPermaLink="true">https://www.markodowd.dev//blog/tmux-3-productive-mouse-free-development-review</guid>
+            <category><![CDATA[Books]]></category>
+            <category><![CDATA[Books]]></category>
+            <category><![CDATA[CLI]]></category>
+            <category><![CDATA[tmux]]></category>
+            <category><![CDATA[Productivity]]></category>
+            <category><![CDATA[Tools]]></category>
+            <dc:creator><![CDATA[Mark O'Dowd]]></dc:creator>
+            <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Lean from the Trenches: A Book Review]]></title>
+            <description><![CDATA[Reflections on Henrik Kniberg's real-world Kanban case study, why Part 2's practical guidance shines, and how it compares to more accessible Agile classics like The Agile Samurai.]]></description>
+            <link>https://www.markodowd.dev//blog/lean-from-the-trenches-review</link>
+            <guid isPermaLink="true">https://www.markodowd.dev//blog/lean-from-the-trenches-review</guid>
+            <category><![CDATA[Books]]></category>
+            <category><![CDATA[Books]]></category>
+            <category><![CDATA[Agile]]></category>
+            <category><![CDATA[Kanban]]></category>
+            <category><![CDATA[Software Engineering]]></category>
+            <category><![CDATA[Project Management]]></category>
+            <category><![CDATA[Lean]]></category>
+            <dc:creator><![CDATA[Mark O'Dowd]]></dc:creator>
+            <pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Agile Samurai: A Book Review]]></title>
+            <description><![CDATA[Why The Agile Samurai's clear, practical approach makes it valuable not just for team leaders, but for developers at any level who want to understand and thrive in Agile environments.]]></description>
+            <link>https://www.markodowd.dev//blog/the-agile-samurai-review</link>
+            <guid isPermaLink="true">https://www.markodowd.dev//blog/the-agile-samurai-review</guid>
+            <category><![CDATA[Books]]></category>
+            <category><![CDATA[Books]]></category>
+            <category><![CDATA[Agile]]></category>
+            <category><![CDATA[Software Engineering]]></category>
+            <category><![CDATA[Career Development]]></category>
+            <category><![CDATA[Team Leadership]]></category>
+            <category><![CDATA[Project Management]]></category>
+            <dc:creator><![CDATA[Mark O'Dowd]]></dc:creator>
+            <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[The Pragmatic Programmer: A Book Review]]></title>
             <description><![CDATA[Why The Pragmatic Programmer remains the single best book about programming in general, and how its core message about taking pride in your work transforms the way we approach software development.]]></description>
-            <link>https://yourdomain.com/blog/the-pragmatic-programmer-review</link>
-            <guid isPermaLink="true">https://yourdomain.com/blog/the-pragmatic-programmer-review</guid>
+            <link>https://www.markodowd.dev//blog/the-pragmatic-programmer-review</link>
+            <guid isPermaLink="true">https://www.markodowd.dev//blog/the-pragmatic-programmer-review</guid>
             <category><![CDATA[Books]]></category>
             <category><![CDATA[Books]]></category>
             <category><![CDATA[Programming]]></category>
@@ -21,7 +79,7 @@
             <category><![CDATA[Career Development]]></category>
             <category><![CDATA[Best Practices]]></category>
             <dc:creator><![CDATA[Mark O'Dowd]]></dc:creator>
-            <pubDate>Sun, 05 Jan 2025 00:00:00 GMT</pubDate>
+            <pubDate>Mon, 05 Jan 2026 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

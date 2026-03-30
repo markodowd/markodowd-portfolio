@@ -122,7 +122,7 @@ export default function Hero() {
           >
             I partner with startups and small to medium-sized enterprises (SMEs)
             to build{" "}
-            <span className="relative inline-block font-semibold text-foreground">
+            <span className="relative inline font-semibold text-foreground">
               modern, scalable web applications
             </span>
             . My focus is on delivering high-performance digital products that

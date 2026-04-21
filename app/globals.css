@@ -313,7 +313,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .prose img {
-  @apply rounded-lg border border-border my-4;
+  @apply rounded-lg border border-border my-4 mx-auto;
+  max-width: min(220px, 100%);
+  height: auto;
 }
 
 .prose hr {

@@ -9,6 +9,8 @@ featured: true
 image: "/images/blogs/make_time.webp"
 ---
 
+![Make Time book cover](/images/blogs/make_time.webp)
+
 **Make Time** by Jake Knapp and John Zeratsky is incredible. It’s one of those books that doesn’t just give you ideas, it changes how you think about your days. I finished it feeling genuinely energized, and it easily makes its way into my top 50 (maybe even top 30) of all time.
 
 ## What Makes It Special

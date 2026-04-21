@@ -9,6 +9,8 @@ featured: true
 image: "/images/blogs/exercises_for_programmers.webp"
 ---
 
+![Exercises for Programmers book cover](/images/blogs/exercises_for_programmers.webp)
+
 When I first heard that **Exercises for Programmers: 57 Challenges to Develop Your Coding Skills** by Brian P. Hogan had no official answers, I thought that sounded strange. Aren't answers the whole point of an exercise book?
 
 After working through it, I realized that this is exactly what makes it so good.

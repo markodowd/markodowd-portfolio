@@ -9,6 +9,8 @@ featured: false
 image: "/images/blogs/lean_from_the_trenches.webp"
 ---
 
+![Lean from the Trenches book cover](/images/blogs/lean_from_the_trenches.webp)
+
 When people talk about Agile, most of the examples are abstract: story cards, sticky notes, and hand‑wavy promises about "flow" and "continuous improvement." **Lean from the Trenches** by Henrik Kniberg is different in that it anchors everything in a very real, very specific project. You’re not reading theory; you’re looking over the shoulder of a team trying to deliver a large‑scale project using Kanban, with all the constraints, compromises, and messy realities that come with it.
 
 For me, the book lands in an interesting place. It’s full of useful ideas, especially if you’re wrestling with large backlogs, complex dependencies, and a lot of stakeholders. But it’s also not the easiest read from start to finish, and some of the same lessons are covered in other books (like **The Agile Samurai**) in a way that feels more engaging. Still, there’s a lot of value here if you’re willing to stick with it.

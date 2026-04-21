@@ -9,6 +9,8 @@ featured: true
 image: "/images/blogs/tmux_3.webp"
 ---
 
+![tmux 3 book cover](/images/blogs/tmux_3.webp)
+
 I have used tmux for a while, but in a very basic way. I knew how to split panes, switch windows, and keep a few sessions around, and that already felt like a win over using a single terminal. **tmux 3: Productive Mouse-Free Development** by Brian P. Hogan took that shallow understanding and pushed it much further. The book does not just show you more features; it shows you how to turn tmux into a real development environment that supports the way you actually work.
 
 ## From Casual User to Confident Operator

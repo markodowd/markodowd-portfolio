@@ -5,7 +5,7 @@ date: "2026-04-21"
 author: "Mark O'Dowd"
 tags: ["Books", "Programming", "Practice", "Learning", "Problem Solving", "Career Development"]
 category: "Books"
-featured: false
+featured: true
 image: "/images/blogs/exercises_for_programmers.webp"
 ---
 

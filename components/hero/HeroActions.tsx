@@ -43,6 +43,21 @@ export function HeroActions() {
           transition={{ duration: 0.3 }}
         />
       </motion.a>
+
+      <motion.a
+        href="#blog"
+        className="relative rounded-full border border-border bg-card/50 backdrop-blur-sm px-8 py-4 text-sm font-medium transition-all overflow-hidden group"
+        whileHover={{ scale: 1.05, borderColor: "oklch(var(--primary) / 0.5)" }}
+        whileTap={{ scale: 0.98 }}
+      >
+        <span className="relative z-10">Read Blog</span>
+        <motion.div
+          className="absolute inset-0 bg-accent/50"
+          initial={{ x: "-100%" }}
+          whileHover={{ x: "0%" }}
+          transition={{ duration: 0.3 }}
+        />
+      </motion.a>
     </motion.div>
   );
 }

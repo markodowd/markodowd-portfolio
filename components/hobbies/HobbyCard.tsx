@@ -15,7 +15,7 @@ export function HobbyCard({ hobby, index }: HobbyCardProps) {
       <div className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg hover:scale-105 flex flex-col h-full">
         <div className="mb-4 flex-1">
           <h3 className="mb-2 text-xl font-semibold">{hobby.name}</h3>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground">
             {hobby.description}
           </p>
           {hobby.link && (
@@ -23,7 +23,7 @@ export function HobbyCard({ hobby, index }: HobbyCardProps) {
               href={hobby.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-block text-sm text-primary hover:underline"
+              className="mt-2 inline-block text-primary hover:underline"
             >
               {hobby.name === "Chess" ? "Lichess Profile" : "YouTube Channel"}
             </a>

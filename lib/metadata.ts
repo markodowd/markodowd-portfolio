@@ -82,7 +82,7 @@ export function createMetadata({
     title: fullTitle,
     description: fullDescription,
     keywords: [
-      "full-stack developer",
+      "full stack developer",
       "software engineer",
       "AWS certified",
       "Next.js",

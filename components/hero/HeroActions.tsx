@@ -13,7 +13,7 @@ export function HeroActions() {
     >
       <motion.a
         href="#work"
-        className="group relative flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground transition-all overflow-hidden"
+        className="group relative flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-medium text-primary-foreground transition-all overflow-hidden"
         whileHover={{ scale: 1.05, boxShadow: "0 10px 30px -10px oklch(var(--primary) / 0.5)" }}
         whileTap={{ scale: 0.98 }}
       >
@@ -31,7 +31,7 @@ export function HeroActions() {
       
       <motion.a
         href="#about"
-        className="relative rounded-full border border-border bg-card/50 backdrop-blur-sm px-8 py-4 text-sm font-medium transition-all overflow-hidden group"
+        className="relative rounded-full border border-border bg-card/50 backdrop-blur-sm px-8 py-4 font-medium transition-all overflow-hidden group"
         whileHover={{ scale: 1.05, borderColor: "oklch(var(--primary) / 0.5)" }}
         whileTap={{ scale: 0.98 }}
       >
@@ -46,7 +46,7 @@ export function HeroActions() {
 
       <motion.a
         href="#blog"
-        className="relative rounded-full border border-border bg-card/50 backdrop-blur-sm px-8 py-4 text-sm font-medium transition-all overflow-hidden group"
+        className="relative rounded-full border border-border bg-card/50 backdrop-blur-sm px-8 py-4 font-medium transition-all overflow-hidden group"
         whileHover={{ scale: 1.05, borderColor: "oklch(var(--primary) / 0.5)" }}
         whileTap={{ scale: 0.98 }}
       >

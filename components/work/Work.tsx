@@ -36,8 +36,8 @@ export default function Work() {
         </div>
         <ul className="mb-10 grid grid-cols-1 sm:grid-cols-2 gap-3 text-muted-foreground">
           {[
-            "Full-Stack SaaS & Web Application MVP Development",
-            "High-Performance Headless CMS & E-commerce Sites",
+            "Full Stack SaaS & Web Application MVP Development",
+            "High Performance Headless CMS & E-commerce Sites",
             "API Development & System Integration",
             "Cloud Infrastructure & DevOps Consulting",
           ].map((service) => (

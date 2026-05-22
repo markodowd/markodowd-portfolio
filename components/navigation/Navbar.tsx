@@ -203,7 +203,7 @@ export default function Navbar() {
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href, link.isHash, link.isHome)}
                     className={cn(
-                      "relative px-4 py-2 text-sm font-medium transition-colors rounded-md",
+                      "relative px-4 py-2 font-medium transition-colors rounded-md",
                       isHomeActive
                         ? "text-primary"
                         : "text-muted-foreground hover:text-foreground hover:bg-accent"
@@ -226,7 +226,7 @@ export default function Navbar() {
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href, link.isHash, link.isHome)}
                     className={cn(
-                      "relative px-4 py-2 text-sm font-medium transition-colors rounded-md",
+                      "relative px-4 py-2 font-medium transition-colors rounded-md",
                       "text-muted-foreground hover:text-foreground hover:bg-accent"
                     )}
                   >
@@ -243,7 +243,7 @@ export default function Navbar() {
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={cn(
-                      "relative px-4 py-2 text-sm font-medium transition-colors rounded-md",
+                      "relative px-4 py-2 font-medium transition-colors rounded-md",
                       "text-muted-foreground hover:text-foreground hover:bg-accent"
                     )}
                   >
@@ -258,7 +258,7 @@ export default function Navbar() {
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href, link.isHash, link.isHome)}
                   className={cn(
-                    "relative px-4 py-2 text-sm font-medium transition-colors rounded-md",
+                    "relative px-4 py-2 font-medium transition-colors rounded-md",
                     isActive
                       ? "text-primary"
                       : "text-muted-foreground hover:text-foreground hover:bg-accent"

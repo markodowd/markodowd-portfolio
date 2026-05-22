@@ -43,7 +43,7 @@ export function CertificateCard({ certificate, index }: CertificateCardProps) {
           </div>
         </div>
         <div className="flex-1">
-          <p className="mb-4 text-sm text-muted-foreground">
+          <p className="mb-4 text-muted-foreground">
             {certificate.description}
           </p>
           <div className="mb-3 w-full">
@@ -62,7 +62,7 @@ export function CertificateCard({ certificate, index }: CertificateCardProps) {
           <p className="mt-2 text-xs text-muted-foreground">
             Credential ID: {certificate.credentialId}
           </p>
-          <div className="mt-3 text-sm font-medium text-primary pointer-events-none">
+          <div className="mt-3 font-medium text-primary pointer-events-none">
             View Credential →
           </div>
         </div>

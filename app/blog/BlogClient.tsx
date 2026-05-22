@@ -129,7 +129,7 @@ export function BlogClient({ posts }: BlogClientProps) {
       </div>
 
       {/* Results count */}
-      <div className="mb-6 text-sm text-muted-foreground">
+      <div className="mb-6 text-muted-foreground">
         Showing {filteredPosts.length} of {posts.length} articles
       </div>
 

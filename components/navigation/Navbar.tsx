@@ -27,6 +27,7 @@ const baseNavLinks: NavLink[] = [
   { href: "#about", label: "About", isHash: true, isHome: false },
   { href: "#projects", label: "Projects", isHash: true, isHome: false },
   { href: "#skills", label: "Skills", isHash: true, isHome: false },
+  { href: "#ambassador", label: "Ambassador", isHash: true, isHome: false },
   { href: "#certificates", label: "Certificates", isHash: true, isHome: false },
   { href: "#hobbies", label: "Hobbies", isHash: true, isHome: false },
   { href: "#contact", label: "Contact", isHash: true, isHome: false },
@@ -72,7 +73,7 @@ export default function Navbar() {
       setIsScrolled(window.scrollY > 20);
 
       // Update active section based on scroll position
-      const sections = ["hero", "about", "projects", "skills", "certificates", "blog", "hobbies", "contact"];
+      const sections = ["hero", "about", "projects", "skills", "ambassador", "certificates", "blog", "hobbies", "contact"];
       const scrollPosition = window.scrollY + 150; // Offset for navbar + some padding
 
       // Check if we're at the top (hero section)

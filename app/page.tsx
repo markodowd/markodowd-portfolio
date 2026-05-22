@@ -2,6 +2,7 @@ import Hero from "@/components/hero/Hero";
 import About from "@/components/about/About";
 import Projects from "@/components/projects/Projects";
 import Skills from "@/components/skills/Skills";
+import Ambassador from "@/components/ambassador/Ambassador";
 import Certificates from "@/components/certificates/Certificates";
 import Hobbies from "@/components/hobbies/Hobbies";
 import Blog from "@/components/blog/Blog";
@@ -25,6 +26,7 @@ export default async function Home() {
       <About />
       <Projects />
       <Skills />
+      <Ambassador />
       <Certificates />
       <Blog posts={featuredPosts} />
       <Hobbies />

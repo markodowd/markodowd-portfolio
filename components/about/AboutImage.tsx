@@ -11,7 +11,7 @@ export function AboutImage() {
           src="/images/user/me.webp"
           alt="Mark O'Dowd, Full-stack Developer and AWS Certified professional"
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-500 hover:scale-105"
           priority
         />
       </div>

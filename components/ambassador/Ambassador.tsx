@@ -102,7 +102,7 @@ export default function Ambassador() {
             alt="Zero To Mastery Academy"
             width={1456}
             height={816}
-            className="w-full object-cover"
+            className="w-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </a>
       </div>

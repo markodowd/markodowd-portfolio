@@ -61,9 +61,9 @@ export default function Navbar() {
     : { href: "/#blog", label: "Blog", isHash: false, isHome: false };
   
   const finalNavLinks: NavLink[] = [
-    ...navLinks.slice(0, 5),
+    ...navLinks.slice(0, 6),
     blogLink,
-    ...navLinks.slice(5),
+    ...navLinks.slice(6),
   ];
 
   useEffect(() => {

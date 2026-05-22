@@ -7,11 +7,7 @@ export function AboutContent() {
     <ScrollAnimation direction="right" delay={0.1}>
       <div className="space-y-4">
         <p className="text-muted-foreground">
-          I&apos;m a full stack software developer from Ireland with experience building modern web
-          applications across the entire stack from polished, accessible user interfaces
-          to backend APIs, databases, and cloud infrastructure on AWS. I approach problems
-          holistically, understanding how each layer of a system fits together to make
-          thoughtful architectural decisions.
+          I&apos;m a full stack software engineer from Ireland with experience building modern web applications across the entire stack from polished, accessible user interfaces to backend APIs, databases, and cloud infrastructure on AWS. I focus on how every layer of a system interacts so I can make thoughtful, long-term architectural decisions.
         </p>
         <p className="text-muted-foreground">
           I care deeply about code quality, performance, and long-term maintainability,

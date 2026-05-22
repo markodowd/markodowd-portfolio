@@ -125,7 +125,9 @@ export default function Hero() {
             <span className="relative inline font-semibold text-foreground">
               modern, scalable web applications
             </span>
-            . My focus is on delivering high-performance digital products that
+            .{" "}
+            <br />
+            My focus is on delivering high-performance digital products that
             bridge the gap between seamless user experience and clean,
             maintainable code
           </motion.p>

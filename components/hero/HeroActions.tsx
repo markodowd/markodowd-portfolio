@@ -12,13 +12,13 @@ export function HeroActions() {
       transition={{ duration: 0.8, delay: 0.8 }}
     >
       <motion.a
-        href="#projects"
+        href="#work"
         className="group relative flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground transition-all overflow-hidden"
         whileHover={{ scale: 1.05, boxShadow: "0 10px 30px -10px oklch(var(--primary) / 0.5)" }}
         whileTap={{ scale: 0.98 }}
       >
         <span className="relative z-10 flex items-center gap-2">
-          View My Work
+          View Work
           <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-1" />
         </span>
         <motion.div

@@ -76,7 +76,7 @@ export default function Ambassador() {
                 rel="noopener noreferrer"
                 className="text-primary underline underline-offset-4 hover:opacity-80 transition-opacity"
               >
-                DevOps Bootcamp: Learn Linux & Become a Linux Sysadmin
+                DevOps Bootcamp
               </a>
             </li>
             <li>
@@ -86,7 +86,7 @@ export default function Ambassador() {
                 rel="noopener noreferrer"
                 className="text-primary underline underline-offset-4 hover:opacity-80 transition-opacity"
               >
-                Rust Programming: The Complete Developer&apos;s Guide
+                Rust Programming
               </a>
             </li>
           </ul>

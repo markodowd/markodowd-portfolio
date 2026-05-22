@@ -1,6 +1,6 @@
 import Hero from "@/components/hero/Hero";
 import About from "@/components/about/About";
-import Projects from "@/components/projects/Projects";
+import Work from "@/components/work/Work";
 import Skills from "@/components/skills/Skills";
 import Ambassador from "@/components/ambassador/Ambassador";
 import Certificates from "@/components/certificates/Certificates";
@@ -24,7 +24,7 @@ export default async function Home() {
     <main className="min-h-screen">
       <Hero />
       <About />
-      <Projects />
+      <Work />
       <Skills />
       <Ambassador />
       <Certificates />

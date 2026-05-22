@@ -62,7 +62,7 @@ export default function Hero() {
               alt="Logo"
               width={400}
               height={400}
-              className="dark:hidden"
+              className="dark:hidden w-48 sm:w-64 md:w-80 lg:w-[400px] h-auto"
               priority
             />
             <Image
@@ -70,7 +70,7 @@ export default function Hero() {
               alt="Logo"
               width={400}
               height={400}
-              className="hidden dark:block"
+              className="hidden dark:block w-48 sm:w-64 md:w-80 lg:w-[400px] h-auto"
               priority
             />
           </motion.div>

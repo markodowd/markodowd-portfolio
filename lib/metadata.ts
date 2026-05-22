@@ -10,15 +10,15 @@ export function getSiteUrl(): string {
 
 const siteUrl = getSiteUrl();
 const siteName = "Mark O'Dowd";
-const defaultTitle = "Mark O'Dowd | Full-stack Developer | AWS Certified";
+const defaultTitle = "Mark O'Dowd | Full Stack Developer | AWS Certified";
 const defaultDescription =
-  "Full-stack software developer from Ireland specializing in modern web applications, cloud architecture, and AWS. Building fast, reliable, and maintainable solutions with Next.js, React, TypeScript, and AWS.";
+  "Full stack software developer from Ireland specializing in modern web applications, cloud architecture, and AWS. Building fast, reliable, and maintainable solutions with Next.js, React, TypeScript, and AWS.";
 
 export const authorName = siteName;
-export const jobTitle = "Full-stack Developer";
-export const jobTitleFull = "Full-stack Software Developer";
+export const jobTitle = "Full Stack Developer";
+export const jobTitleFull = "Full Stack Software Developer";
 export const credentials = {
-  jobTitle: "Full-stack Developer",
+  jobTitle: "Full Stack Developer",
   awsCertified: "AWS Certified",
   location: "Based in Ireland",
 };

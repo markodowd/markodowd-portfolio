@@ -3,51 +3,6 @@
 import { useMousePosition } from "@/hooks/use-mouse-position";
 import { SectionBackground } from "@/components/shared/SectionBackground";
 import { ProjectsHeader } from "./ProjectsHeader";
-import { ProjectCard } from "./ProjectCard";
-import { siteConfig } from "@/lib/metadata";
-
-interface Project {
-  title: string;
-  description: string;
-  technologies: string[];
-  liveUrl: string;
-  image: string;
-}
-
-const projects: Project[] = [
-  {
-    title: "Fight or Flight Studio",
-    description:
-      "A custom portfolio website built for a Manchester-based creative studio. Developed using a modern tech stack and deployed to AWS with staging and production environments. Integrated Contentful CMS for content management and configured Cloudflare DNS for enhanced performance and security.",
-    technologies: ["Next", "React", "TypeScript", "Contentful CMS", "AWS"],
-    liveUrl: "https://www.fightorflight.studio",
-    image: "/images/projects/forf.webp",
-  },
-  {
-    title: "Irish Trad",
-    description:
-      "A full-stack web application designed for musicians learning traditional Irish instruments. Features include interactive sheet music, ear and sight training modules, along with practice tools such as a chromatic tuner and metronome. A passion project that demonstrates my dedication to creating meaningful, community-focused applications.",
-    technologies: ["Next", "React", "TypeScript", "Django", "AWS"],
-    liveUrl: "https://www.irishtrad.ie",
-    image: "/images/projects/irishtrad.webp",
-  },
-  {
-    title: "Repair Rehab",
-    description:
-      "One of the leading device repair shops in N.Ireland (covering the UK & Ireland) was looking to increase their online presence. A landing page was created to improve SEO and provide a more professional look and feel. In addition, a custom management system is being developed to allow the client to easily manage orders and customer information.",
-    technologies: ["Next", "React", "TypeScript", "Express", "Node", "AWS"],
-    liveUrl: "https://www.repair-rehab.com/",
-    image: "/images/projects/repairrehab.webp",
-  },
-  {
-    title: "Mushin Jujitsu Trainer",
-    description:
-      "Supplemental learning tool for practictioners of jujitsu under the World Jujitsu Federation (WJJF) Ireland. It is a high-performance static site (SSG) built with Next.js and Tailwind CSS. This project features a fully automated CI/CD pipeline powered by GitHub Actions handling automated build and deployments directly to AWS",
-    technologies: ["Next", "React", "TypeScript", "Tailwind CSS", "GitHub Actions", "AWS"],
-    liveUrl: "https://www.jujitsu.ie",
-    image: "/images/projects/jujitsu.webp",
-  },
-];
 
 export default function Projects() {
   const { mousePosition, ref } = useMousePosition();
@@ -61,13 +16,10 @@ export default function Projects() {
       <SectionBackground mousePosition={mousePosition} opacity={0.2} />
       <div className="relative mx-auto max-w-6xl z-10">
         <ProjectsHeader />
-        <div className="grid gap-8 md:grid-cols-2">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} index={index} />
-          ))}
+        <div className="flex items-center justify-center min-h-[200px] rounded-lg border border-dashed border-border text-muted-foreground">
+          Coming soon
         </div>
       </div>
     </section>
   );
 }
-

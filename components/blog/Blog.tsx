@@ -8,6 +8,7 @@ import { BlogPost } from "@/lib/blog";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { NewsletterForm } from "./NewsletterForm";
 
 interface BlogProps {
   posts: BlogPost[];
@@ -30,6 +31,7 @@ export default function Blog({ posts }: BlogProps) {
       <SectionBackground mousePosition={mousePosition} opacity={0.2} />
       <div className="relative mx-auto max-w-6xl z-10">
         <BlogHeader />
+        <NewsletterForm />
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {featuredPosts.map((post, index) => (
             <BlogCard key={post.slug} post={post} index={index} />

@@ -1,6 +1,7 @@
 import { getPostSlugs, getPostBySlug, getRelatedPosts } from "@/lib/blog";
 import { BlogPost } from "@/components/blog/BlogPost";
 import { BlogCard } from "@/components/blog/BlogCard";
+import { NewsletterForm } from "@/components/blog/NewsletterForm";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -69,6 +70,10 @@ export default async function BlogPostPage({
           </div>
 
           <BlogPost post={post} />
+
+          <div className="mt-16 pt-16 border-t border-border">
+            <NewsletterForm />
+          </div>
 
           {relatedPosts.length > 0 && (
             <div className="mt-16 pt-16 border-t border-border">

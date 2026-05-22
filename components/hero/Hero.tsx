@@ -7,6 +7,7 @@ import { HeroActions } from "./HeroActions";
 import { SocialIcons } from "./SocialIcons";
 import { ScrollIndicator } from "./ScrollIndicator";
 import { siteConfig } from "@/lib/metadata";
+import { SimpleIcon } from "@/components/shared/SimpleIcon";
 
 export default function Hero() {
   const { mousePosition, ref } = useMousePosition();
@@ -111,6 +112,37 @@ export default function Hero() {
             <span>{siteConfig.credentials.awsCertified}</span>
             <span className="text-muted-foreground/50">•</span>
             <span>{siteConfig.credentials.location}</span>
+          </motion.div>
+
+          {/* Tech stack icons */}
+          <motion.div
+            className="flex items-center justify-center gap-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.65 }}
+          >
+            {[
+              { icon: "siTypescript" as const, label: "TypeScript" },
+              { icon: "siPython" as const, label: "Python" },
+              { icon: "siRust" as const, label: "Rust" },
+            ].map(({ icon, label }, index) => (
+              <motion.div
+                key={label}
+                className="flex flex-col items-center gap-2"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.75 + index * 0.12, type: "spring", stiffness: 120 }}
+                whileHover={{ scale: 1.15, y: -4 }}
+              >
+                <SimpleIcon
+                  icon={icon}
+                  className="h-14 w-14 text-foreground"
+                />
+                <span className="text-xs font-medium text-muted-foreground tracking-wide uppercase">
+                  {label}
+                </span>
+              </motion.div>
+            ))}
           </motion.div>
 
           {/* Enhanced description with better animation */}

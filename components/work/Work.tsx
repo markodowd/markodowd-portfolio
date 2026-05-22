@@ -17,20 +17,36 @@ export default function Work() {
       <SectionBackground mousePosition={mousePosition} opacity={0.2} />
       <div className="relative mx-auto max-w-6xl z-10">
         <WorkHeader />
-        <p className="mb-10 text-center text-muted-foreground">
-          I am the founder and lead engineer at{" "}
-          <a
-            href="https://www.emeraldsoftware.ie"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline underline-offset-4 hover:opacity-80 transition-opacity"
-          >
-            Emerald Software
-          </a>
-          , an Irish web software company.{" "}
-          <br />
-          We specialise in building responsive web applications, providing expert cloud architecture, and delivering tailored software solutions.
-        </p>
+        <div className="mb-10 space-y-4 text-center text-muted-foreground">
+          <p>
+            I am the founder and lead engineer at{" "}
+            <a
+              href="https://www.emeraldsoftware.ie"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline underline-offset-4 hover:opacity-80 transition-opacity"
+            >
+              Emerald Software
+            </a>
+            , an Irish web software company.
+          </p>
+          <p>
+            We specialise in building responsive web applications, providing expert cloud architecture, and delivering tailored software solutions, including:
+          </p>
+        </div>
+        <ul className="mb-10 grid grid-cols-1 sm:grid-cols-2 gap-3 text-muted-foreground">
+          {[
+            "Full-Stack SaaS & Web Application MVP Development",
+            "High-Performance Headless CMS & E-commerce Sites",
+            "API Development & System Integration",
+            "Cloud Infrastructure & DevOps Consulting",
+          ].map((service) => (
+            <li key={service} className="flex items-center gap-3 rounded-xl border border-border bg-background/50 px-4 py-3">
+              <span className="size-1.5 rounded-full bg-primary shrink-0" />
+              {service}
+            </li>
+          ))}
+        </ul>
         <a
           href="https://www.emeraldsoftware.ie"
           target="_blank"

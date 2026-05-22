@@ -114,23 +114,26 @@ export default function Hero() {
           </motion.div>
 
           {/* Enhanced description with better animation */}
-          <motion.p
-            className="mx-auto max-w-2xl text-lg text-muted-foreground/90 sm:text-xl leading-relaxed"
+          <motion.div
+            className="mx-auto max-w-2xl space-y-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            I partner with startups and small to medium-sized enterprises (SMEs)
-            to build{" "}
-            <span className="relative inline font-semibold text-foreground">
-              modern, scalable web applications
-            </span>
-            .{" "}
-            <br />
-            My focus is on delivering high-performance digital products that
-            bridge the gap between seamless user experience and clean,
-            maintainable code
-          </motion.p>
+            <p className="text-lg text-muted-foreground/90 sm:text-xl leading-relaxed">
+              I partner with startups and small to medium-sized enterprises (SMEs)
+              to build{" "}
+              <span className="relative inline font-semibold text-foreground">
+                modern, scalable web applications
+              </span>
+              .
+            </p>
+            <p className="text-lg text-muted-foreground/90 sm:text-xl leading-relaxed">
+              My focus is on delivering high-performance digital products that
+              bridge the gap between seamless user experience and clean,
+              maintainable code.
+            </p>
+          </motion.div>
         </motion.div>
 
         <HeroActions />

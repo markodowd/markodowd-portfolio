@@ -1,14 +1,13 @@
 import ScrollAnimation from "@/components/shared/ScrollAnimation";
 
-export function ProjectsHeader() {
+export function WorkHeader() {
   return (
     <ScrollAnimation direction="up">
       <div className="mb-16 text-center">
         <h2 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
-          My Work
+          Work
         </h2>
       </div>
     </ScrollAnimation>
   );
 }
-

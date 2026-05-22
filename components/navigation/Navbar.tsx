@@ -25,7 +25,7 @@ type NavLink = {
 const baseNavLinks: NavLink[] = [
   { href: "/", label: "Home", isHash: false, isHome: true },
   { href: "#about", label: "About", isHash: true, isHome: false },
-  { href: "#projects", label: "Work", isHash: true, isHome: false },
+  { href: "#work", label: "Work", isHash: true, isHome: false },
   { href: "#skills", label: "Skills", isHash: true, isHome: false },
   { href: "#ambassador", label: "Ambassador", isHash: true, isHome: false },
   { href: "#certificates", label: "Certificates", isHash: true, isHome: false },

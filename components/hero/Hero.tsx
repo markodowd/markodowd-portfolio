@@ -2,6 +2,7 @@
 
 import { useMousePosition } from "@/hooks/use-mouse-position";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { HeroBackground } from "./HeroBackground";
 import { HeroActions } from "./HeroActions";
 import { SocialIcons } from "./SocialIcons";
@@ -37,7 +38,7 @@ export default function Hero() {
     <section
       ref={ref}
       id="hero"
-      className="relative flex min-h-screen flex-col items-center justify-center px-4 pt-24 pb-20 text-center overflow-hidden"
+      className="relative flex min-h-screen flex-col items-center justify-center px-4 pt-40 pb-32 text-center overflow-hidden"
     >
       <HeroBackground mousePosition={mousePosition} />
 
@@ -49,9 +50,34 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.21, 1.11, 0.81, 0.99] }}
         >
+          {/* Logo */}
+          <motion.div
+            className="flex justify-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.1, type: "spring", stiffness: 100 }}
+          >
+            <Image
+              src="/images/logo/logo-dark.webp"
+              alt="Logo"
+              width={400}
+              height={400}
+              className="dark:hidden"
+              priority
+            />
+            <Image
+              src="/images/logo/logo-light.webp"
+              alt="Logo"
+              width={400}
+              height={400}
+              className="hidden dark:block"
+              priority
+            />
+          </motion.div>
+
           {/* Enhanced name with better typography */}
           <motion.h1
-            className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl"
+            className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{

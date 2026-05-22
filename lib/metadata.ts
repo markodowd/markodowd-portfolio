@@ -134,6 +134,9 @@ export function createMetadata({
       images: [ogImage],
       creator: siteConfig.xHandle,
     },
+    appleWebApp: {
+      title: siteName,
+    },
     robots: {
       index: true,
       follow: true,

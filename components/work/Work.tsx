@@ -18,6 +18,9 @@ export default function Work() {
       <div className="relative mx-auto max-w-6xl z-10">
         <WorkHeader />
         <div className="mb-10 space-y-4 text-center text-muted-foreground">
+          <p className="text-foreground font-medium">
+            Mark O&apos;Dowd, Trading As Emerald Software
+          </p>
           <p>
             I am the founder and lead engineer at{" "}
             <a

@@ -38,7 +38,7 @@ export default function Hero() {
     <section
       ref={ref}
       id="hero"
-      className="relative flex min-h-screen flex-col items-center justify-center px-4 pt-40 pb-32 text-center overflow-hidden"
+      className="relative flex min-h-screen flex-col items-center justify-center px-4 pt-20 sm:pt-40 pb-32 text-center overflow-hidden"
     >
       <HeroBackground mousePosition={mousePosition} />
 

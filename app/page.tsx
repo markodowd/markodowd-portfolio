@@ -4,6 +4,7 @@ import Work from "@/components/work/Work";
 import Skills from "@/components/skills/Skills";
 import Ambassador from "@/components/ambassador/Ambassador";
 import Certificates from "@/components/certificates/Certificates";
+import Talk from "@/components/talk/Talk";
 import Hobbies from "@/components/hobbies/Hobbies";
 import Blog from "@/components/blog/Blog";
 import Contact from "@/components/contact/Contact";
@@ -29,6 +30,7 @@ export default async function Home() {
       <Ambassador />
       <Certificates />
       <Blog posts={featuredPosts} />
+      <Talk />
       <Hobbies />
       <Contact />
       <Footer />

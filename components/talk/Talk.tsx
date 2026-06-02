@@ -4,14 +4,14 @@ export default function Talk() {
   return (
     <section id="talk" className="relative px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Tech Talks</h2>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-center">Tech Talks</h2>
+        <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="text-center lg:text-left">
+            <p className="text-muted-foreground">
               I&apos;m incredibly passionate about teaching and mentoring, which is exactly what drives me to step away from the terminal and share engineering insights on stage.
             </p>
-            <h4 className="mt-8 text-lg font-semibold">Some of my tech talks</h4>
-            <ul className="mt-3 flex flex-col gap-2">
+            <h4 className="mt-6 text-lg font-semibold">Some of my tech talks</h4>
+            <ul className="mt-3 flex flex-col items-center lg:items-start gap-2">
               <li>
                 <a
                   href="https://github.com/markodowd/2026-30-05-data-engineering-apache-spark"

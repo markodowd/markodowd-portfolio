@@ -9,6 +9,7 @@ const socialLinks = [
   { icon: Linkedin, href: "https://www.linkedin.com/in/markodowd2/", label: "LinkedIn", isSimpleIcon: false },
   { icon: "siX", href: "https://x.com/markodowd_dev", label: "X", isSimpleIcon: true },
   { icon: "siBluesky", href: "https://bsky.app/profile/markodowd.dev", label: "Bluesky", isSimpleIcon: true },
+  { icon: "siMastodon", href: "https://mastodon.social/@markodowd", label: "Mastodon", isSimpleIcon: true },
   { icon: Mail, href: "mailto:contact@markodowd.dev", label: "Email", isSimpleIcon: false },
 ] as const;
 

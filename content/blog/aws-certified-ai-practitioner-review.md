@@ -45,4 +45,4 @@ If you already work deeply with SageMaker, Bedrock, and the full AWS AI stack ev
 
 What I liked most about this study guide is that it does not try to impress you with volume. It explains AWS AI concepts in accessible language, stays focused on what matters for the certification, and backs it up with practice exams and quizzes that genuinely help you prepare.
 
-If you are working toward the AWS Certified AI Practitioner certification and you want a study guide that feels lean, clear, and practical, this one delivers. No bloat, no filler—just the material you need to walk into the exam with confidence.
+If you are working toward the AWS Certified AI Practitioner certification and you want a study guide that feels lean, clear, and practical, this one delivers. No bloat, no filler. Just the material you need to walk into the exam with confidence.

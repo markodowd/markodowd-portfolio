@@ -26,6 +26,15 @@ const certificates: Certificate[] = [
     credentialUrl: "https://cp.certmetrics.com/amazon/en/public/verify/credential/99597869b2b646e0817788459a545da4"
   },
   {
+    title: "AWS Certified AI Practitioner",
+    issuer: "Amazon Web Services",
+    date: "2026",
+    description: "This certification validates knowledge of artificial intelligence, machine learning, and generative AI concepts and their implementation on AWS. It covers AI/ML services, prompt engineering, responsible AI practices, and the use of foundation models for building intelligent applications.",
+    image: "/images/certifications/ai.webp",
+    credentialId: "81e1a61e008945e08cf50d4654b3fe2b",
+    credentialUrl: "https://cp.certmetrics.com/amazon/en/public/verify/credential/81e1a61e008945e08cf50d4654b3fe2b",
+  },
+  {
     title: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services",
     date: "2024",
@@ -49,9 +58,22 @@ export default function Certificates() {
       <div className="relative mx-auto max-w-6xl z-10">
         <CertificatesHeader />
         <div className="grid gap-6 md:grid-cols-2">
-          {certificates.map((certificate, index) => (
-            <CertificateCard key={index} certificate={certificate} index={index} />
-          ))}
+          {certificates.map((certificate, index) => {
+            const isLastOdd =
+              index === certificates.length - 1 && certificates.length % 2 === 1;
+            return (
+              <div
+                key={index}
+                className={
+                  isLastOdd
+                    ? "md:col-span-2 md:mx-auto md:w-[calc(50%-0.75rem)]"
+                    : undefined
+                }
+              >
+                <CertificateCard certificate={certificate} index={index} />
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

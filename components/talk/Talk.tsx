@@ -14,6 +14,16 @@ export default function Talk() {
             <ul className="mt-3 flex flex-col items-center lg:items-start gap-2">
               <li>
                 <a
+                  href="https://github.com/markodowd/presentation-2026-08-29-ai-skills"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary underline underline-offset-4 hover:opacity-80 transition-opacity"
+                >
+                  AI Skills: What They Are and How to Create Your Own
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://github.com/markodowd/2026-30-05-data-engineering-apache-spark"
                   target="_blank"
                   rel="noopener noreferrer"

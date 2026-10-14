@@ -29,7 +29,7 @@ const baseNavLinks: NavLink[] = [
   { href: "#skills", label: "Skills", isHash: true, isHome: false },
   { href: "#ambassador", label: "Ambassador", isHash: true, isHome: false },
   { href: "#certificates", label: "Certificates", isHash: true, isHome: false },
-  { href: "#talk", label: "Talk", isHash: true, isHome: false },
+  { href: "#talk", label: "Tech Talks", isHash: true, isHome: false },
   { href: "#hobbies", label: "Hobbies", isHash: true, isHome: false },
   { href: "#contact", label: "Contact", isHash: true, isHome: false },
 ];

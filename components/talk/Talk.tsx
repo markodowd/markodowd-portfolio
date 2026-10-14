@@ -14,7 +14,7 @@ export default function Talk() {
             <ul className="mt-3 flex flex-col items-center lg:items-start gap-2">
               <li>
                 <a
-                  href="https://github.com/markodowd/presentation-2026-08-29-ai-skills"
+                  href="https://github.com/markodowd/tech-talks/tree/main/2026-08-29-ai-skills"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary underline underline-offset-4 hover:opacity-80 transition-opacity"
@@ -24,7 +24,7 @@ export default function Talk() {
               </li>
               <li>
                 <a
-                  href="https://github.com/markodowd/2026-30-05-data-engineering-apache-spark"
+                  href="https://github.com/markodowd/tech-talks/tree/main/2026-05-30-apache-spark"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary underline underline-offset-4 hover:opacity-80 transition-opacity"

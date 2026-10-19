@@ -8,7 +8,7 @@ export interface Hobby {
 export const hobbies: Hobby[] = [
   {
     name: "Ju-Jitsu",
-    description: "I have been training in Ju-Jitsu (Japanese) under the World Ju-Jitsu Federation Ireland since 2012. After many years of dedication and discipline I have earned and recognised as a 1st degree Black Belt (1st Dan)",
+    description: "I have been training in Ju-Jitsu (Japanese) under the World Ju-Jitsu Federation Ireland since 2012. After many years of dedication and discipline I have earned and been recognised as a 1st degree Black Belt (1st Dan)",
     image: "/images/hobbies/jujitsu.webp",
   },
   {
